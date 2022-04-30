@@ -31,7 +31,7 @@
 
 ## 8. IT-Security
 
-1. Firewallkonzepte
-2. Kryptographie
-3. Paketfilter mit IP-Tables
-4. Virtual Private Network (VPN)
+1. Firewallkonzepte (REFR)
+2. Kryptographie (REFR)
+3. Paketfilter mit IP-Tables (ELSI)
+4. Virtual Private Network (ELSI)
