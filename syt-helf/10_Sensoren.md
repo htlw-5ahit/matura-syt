@@ -1,12 +1,54 @@
 # Sensoren
 
+- [Taster](#taster)
+- [Temperatur- & Feuchtigkeitssensor (DHT11)](#temperatur---feuchtigkeitssensor-dht11)
+- [Temperaturempﬁndlicher Widerstand (NTC)](#temperaturempﬁndlicher-widerstand-ntc)
+- [Fotowiderstand (LDR)](#fotowiderstand-ldr)
+- [Entfernungssensor](#entfernungssensor)
+- [Bewegungssensor](#bewegungssensor)
+
 ## Taster
 
 Der digitale Taster ist über eine Platine mit Breakout Platine verbunden.
 
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/taster.png) | !()[./assets/taster_aufbau.png] |
+| ![](./assets/taster.png) | ![](./assets/taster_aufbau.png) |
+
+Beispiele:
+- [Arduino: LED mit Button](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/button)
+
+## Drehgeber
+
+Rotary Encoder (Drehgeber oder Drehcodierer) ist vom äußerlichen Aufbau ähnlich wie ein Potentiometer.
+
+Diese sogenannten Drehregler kennt man zum Beispiel von vielen Radios, wo man damit die Lautstärke regeln kann. Man ﬁndet solche Bauteile aber auch bei Maschinen, wo man z.B. eine Geschwindigkeit oder Drehzahl einstellen kann oder auch beim Scroll-Rad in einer Computermaus.
+
+Der Drehgeber liefert digitale Ausgangssignale, die von einem Mikrocontroller ausgewertet werden können. Neben der Stromversorgung werden dafür zwei weitere Leitungen benötigt. Über diese zwei Leitungen werden bei der Drehung elektrische Impulse (HIGH und LOW) an einem Controller gesendet.
+
+Der Drehgeber hat zwei Aufgaben
+* DT und CLK werden benutzt, um eine Rotation des Drehgebers zu erkennen
+* SW ist dafür da, um zu erkennen, ob der Drehgeber gedrückt wurde oder nicht
+
+![](./assets/drehgeber.png)
+
+Beispiele:
+- [Arduino: Drehgeber](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/drehgeber)
+- [Arduino: Entfernungsmessung mit einstellbarerer Distanz](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/entfernungsmessung_distanz)
+
+## Joystick
+
+Der Joystick hat drei Aufgaben:
+* Auslesen der Position des Joysticks in x-Richtung
+* Auslesen der Position des Joysticks in y-Richtung
+* Auslesen, ob der Joystick gedrückt wird oder nicht
+
+| Sensor | Aufbau |
+|--------|--------|
+| ![](./assets/joystick.png) | ![](./assets/joystick_aufbau.png) |
+
+Beispiele:
+- [Arduino: Fade mit Joystick](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/joystick_fade/)
 
 ## Temperatur- & Feuchtigkeitssensor (DHT11)
 
@@ -20,7 +62,10 @@ Ein Thermistor ist eigentlich ein veränderlicher Widerstand, der seinen Widerst
 
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/dht11.png) | !()[./assets/dht11_aufbau.png] |
+| ![](./assets/dht11.png) | ![](./assets/dht11_aufbau.png) |
+
+Beispiele:
+- [Arduino: DHT11](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/dht11/)
 
 ## Temperaturempﬁndlicher Widerstand (NTC)
 
@@ -30,7 +75,9 @@ NTCs dienen als Temperatursensor oder als Einschaltstrombegrenzer. Um die typisc
 
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/ntc.png) | !()[./assets/ntc_aufbau.png] |
+| ![](./assets/ntc.png) | ![](./assets/ntc_aufbau.png) |
+
+- [Arduino: Temperatursensor mit SteinhartHart](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/dht11/steinharthart)
 
 ## Fotowiderstand (LDR)
 
@@ -44,7 +91,7 @@ Fotowiderstände werden beispielsweise in Belichtungsmessern und in Dämmerungss
 
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/ldr.png) | !()[./assets/ldr_aufbau.png] |
+| ![](./assets/ldr.png) | ![](./assets/ldr_aufbau.png) |
 
 ## Entfernungssensor
 
@@ -56,9 +103,15 @@ Der Ultraschallsensor HC-SR04 benötigt zunächst eine Versorgungsspannung von 5
 
 Auch ein für den Mensch nicht hörbarer Ultraschallton ist ein akustischer Schall. Er verhält sich demnach entsprechend den physikalischen Gesetzen. Der Schall hat eine bestimmte Geschwindigkeit, er legt in der Sekunde 330 Meter zurück. Wenn man also weiß wie lange es dauert bis der Ultraschallsensor sein eigenes Echo empfängt, dann kann man leicht ausrechnen wieviel Meter bzw. auch Zentimeter der Schall zurückgelegt hat. Diese errechnete Entfernung muss man dann allerdings noch durch 2 teilen, denn wir wollen ja nur die einmalige Wegstrecke berechnen und nicht den gesamten Hin- und Rückweg.
 
+
+Beispiele:
+- [Arduino: Entfernungsmessung mit NewPing](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/entfernungsmessung)
+- [Arduino: Bewegungs- & Entfernungsmessung](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungs_entfernungsmessung)
+- [Arduino: Entfernungsmessung mit einstellbarerer Distanz](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/entfernungsmessung_distanz)
+
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/hcsro4.png) | !()[./assets/hcsro4_aufbau.png] |
+| ![](./assets/hcsro4.png) | ![](./assets/hcsro4_aufbau.png) |
 
 ## Bewegungssensor
 
@@ -72,4 +125,8 @@ Damit aber nicht statische Wärmequellen (besonntes Fenster, Heizkörper etc.) d
 
 | Sensor | Aufbau |
 |--------|--------|
-| ![](./assets/hcsr501.png) | !()[./assets/hcsr501_aufbau.png] |
+| ![](./assets/hcsr501.png) | ![](./assets/hcsr501_aufbau.png) |
+
+Beispiele:
+- [Arduino: Bewegungssensor](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungssensor)
+- [Arduino: Bewegungs- & Entfernungsmessung](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungs_entfernungsmessung)

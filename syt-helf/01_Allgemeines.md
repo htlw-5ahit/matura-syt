@@ -59,7 +59,7 @@ Ist ein GPIO als Ausgang deﬁniert, dann kann man Schaltzustände an externe Sc
 
 #### GPIO auf der Linux Konsole
 
-`gpio readall`
-`gpio -1 write <physical pin id> <0/1>`
+* `gpio readall`
+* `gpio -1 write <physical pin id> <0/1>`
 
 ![](./assets/gpio.png)
