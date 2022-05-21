@@ -82,7 +82,7 @@ NTCs dienen als Temperatursensor oder als Einschaltstrombegrenzer. Um die typisc
 |--------|--------|
 | ![](./assets/ntc.png) | ![](./assets/ntc_aufbau.png) |
 
-- [Arduino: Temperatursensor mit SteinhartHart](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/dht11/steinharthart)
+- [Arduino: Temperatursensor mit SteinhartHart](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/steinharthart)
 - [Raspberry Pi: ADS1115](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/ads1115.c)
 - [Raspberry Pi: DS18B20](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/ds18b20.c)
 

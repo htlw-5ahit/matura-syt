@@ -4,3 +4,5 @@
 2. [Analog & Digital](./02_Analog_Digital.md)
 3. [Textausgabe](./03_Textausgabe.md)
 4. [Sensoren](./10_Sensoren.md)
+5. [Aktoren](./11_Aktoren.md)
+6. [Visuelle Anzeigen](./12_VisuelleAnzeigen.md)
