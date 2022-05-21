@@ -3,7 +3,7 @@
 ## 1. Mikrocontroller - Anzeige und Bedienung
 
 1.	Ansteuerung von visuellen Anzeigen (LED, LCD, 7-Segment, blinken, ...) `auch am Raspberry Pi`
-2.	Nutzung analoger und digitaler Eingabegeräte (Taster, Joystick, …) `auch am Raspberry Pi`
+2.	Nutzung analoger und digitaler Eingabegeräte (Taster, Joystick, ...) `auch am Raspberry Pi`
 3.	Bereitstellung von Information/Werten über die serielle Schnittstelle
 4.	Übernahme von Kommandos/Werten über die serielle Schnittstelle
 5.	Anbindung von mobilen Geräten zur Ein-/Ausgabe via Bluetooth `Bluetooth Electronics`
@@ -16,7 +16,7 @@
 
 ## 3. Mikrocontroller - kommunizieren und speichern
 
-1.	Kommunikation mit Sensoren, Aktoren, Anzeigen, … über Busse
+1.	Kommunikation mit Sensoren, Aktoren, Anzeigen, ... über Busse
 2.	Speicherung von Information auf SD-Karte
 3.	Kommunikation mit/zwischen µControllern über Busse
 

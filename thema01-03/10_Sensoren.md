@@ -1,11 +1,14 @@
 # Sensoren
 
 - [Taster](#taster)
+- [Drehgeber](#drehgeber)
 - [Temperatur- & Feuchtigkeitssensor (DHT11)](#temperatur---feuchtigkeitssensor-dht11)
 - [Temperaturempﬁndlicher Widerstand (NTC)](#temperaturempﬁndlicher-widerstand-ntc)
 - [Fotowiderstand (LDR)](#fotowiderstand-ldr)
 - [Entfernungssensor](#entfernungssensor)
 - [Bewegungssensor](#bewegungssensor)
+- [Luftdrucksensor](#luftdrucksensor)
+- [Gyroskop-Sensor](#gyroskop-sensor)
 
 ## Taster
 
@@ -49,6 +52,7 @@ Der Joystick hat drei Aufgaben:
 
 Beispiele:
 - [Arduino: Fade mit Joystick](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/joystick_fade/)
+- [Raspberry Pi: Joystick](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/joystick.c)
 
 ## Temperatur- & Feuchtigkeitssensor (DHT11)
 
@@ -66,6 +70,7 @@ Ein Thermistor ist eigentlich ein veränderlicher Widerstand, der seinen Widerst
 
 Beispiele:
 - [Arduino: DHT11](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/dht11/)
+- [Raspberry Pi: DHT11](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/dht11.c)
 
 ## Temperaturempﬁndlicher Widerstand (NTC)
 
@@ -78,6 +83,8 @@ NTCs dienen als Temperatursensor oder als Einschaltstrombegrenzer. Um die typisc
 | ![](./assets/ntc.png) | ![](./assets/ntc_aufbau.png) |
 
 - [Arduino: Temperatursensor mit SteinhartHart](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/dht11/steinharthart)
+- [Raspberry Pi: ADS1115](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/ads1115.c)
+- [Raspberry Pi: DS18B20](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/ds18b20.c)
 
 ## Fotowiderstand (LDR)
 
@@ -92,6 +99,10 @@ Fotowiderstände werden beispielsweise in Belichtungsmessern und in Dämmerungss
 | Sensor | Aufbau |
 |--------|--------|
 | ![](./assets/ldr.png) | ![](./assets/ldr_aufbau.png) |
+
+Beispiele:
+- [Raspberry Pi: BH1750](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/bh1750.c)
+- [Raspberry Pi: ADS1115](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/ads1115.c)
 
 ## Entfernungssensor
 
@@ -108,6 +119,7 @@ Beispiele:
 - [Arduino: Entfernungsmessung mit NewPing](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/entfernungsmessung)
 - [Arduino: Bewegungs- & Entfernungsmessung](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungs_entfernungsmessung)
 - [Arduino: Entfernungsmessung mit einstellbarerer Distanz](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/entfernungsmessung_distanz)
+- [Raspberry Pi: HC-SRO4](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/hc-sr04.c)
 
 | Sensor | Aufbau |
 |--------|--------|
@@ -130,3 +142,13 @@ Damit aber nicht statische Wärmequellen (besonntes Fenster, Heizkörper etc.) d
 Beispiele:
 - [Arduino: Bewegungssensor](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungssensor)
 - [Arduino: Bewegungs- & Entfernungsmessung](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/bewegungs_entfernungsmessung)
+
+## Luftdrucksensor
+
+Beispiele:
+- [Raspberry Pi: BMP180](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/bmp180.c)
+
+## Gyroskop-Sensor
+
+Beispiele:
+- [Raspberry Pi: MPU-6050](https://github.com/htlw-5ahit/matura-syt/tree/main/syt-helf/code/raspberrypi/sensoren/mpu-6050.c)
