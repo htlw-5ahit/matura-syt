@@ -1,20 +1,5 @@
 # Systemtechnik 5 - Hardwarenahe Programmierung
 
-## Theorie
-
-- [Bussysteme](./theorie/Bussysteme.md)
-  - [UART - Universal Asynchronous Receiver / Transmitter](./theorie/UART.md)
-  - [I²C - Inter-Integrated Circuit](./theorie/I2C.md)
-  - [SPI - Serial Peripheral Interface](./theorie/SPI.md)
-  - [CAN - Controller Area Network](./theorie/CAN.md)
-
-## Protokolle
-
-- [Protokoll 01 - LCD](./protokolle/Protokoll01_LCD.pdf)
-- [Protokoll 02 - SD Card](./protokolle/Protokoll02_SDCard.pdf)
-- [Protokoll 03 - Bluetooth](./protokolle/Protokoll03_Bluetooth.pdf)
-- [Protokoll 04 - Kommunikation](./protokolle/Protokoll04_Kommunikation.pdf)
-
 ## Übungen
 
 | Thema | Übungen |

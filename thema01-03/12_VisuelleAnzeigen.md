@@ -5,6 +5,28 @@
 
 ## LED
 
+* LED … Light Emitting Diodes
+* LEDs sind Leuchtdioden, die in vielen verschiedenen Farben erhältlich sind.
+* Die LEDs können nicht direkt auf das Board angehängt werden, da sie eine Platine benötigt wird, um diese dort aufzustecken.
+
+```c
+// constants won't change. They're used here to set pin numbers:
+const int led = 4;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin as an output.
+  pinMode(led, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+}
+```
 
 ## LCD
 
