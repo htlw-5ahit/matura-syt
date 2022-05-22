@@ -26,7 +26,7 @@ void setup() {
 void loop() {
 	servo1.write(70);
 	delay(1000);
-  
+
 	servo1.write(140);
 	delay(1000);
 }
@@ -84,7 +84,7 @@ int count;
 
 #include <Stepper.h>
 
-const int stepsPerRevolution = 20;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 20; // change this to fit the number of steps per revolution
 // for your motor
 
 // initialize the stepper library on pins 8 through 11:

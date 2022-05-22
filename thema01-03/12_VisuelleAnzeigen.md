@@ -15,16 +15,16 @@ const int led = 4;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin as an output.
-  pinMode(led, OUTPUT);
+    // initialize digital pin as an output.
+    pinMode(led, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);               // wait for a second
+    digitalWrite(led, HIGH);    // turn the LED on (HIGH is the voltage level)
+    delay(1000);                // wait for a second
+    digitalWrite(led, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
 }
 ```
 
@@ -42,5 +42,5 @@ void loop() {
 | `lcd_i2c_puts(&lcd, formatedText);` | Schreiben des vorbereiteten Textes auf das LCD Display |
 
 Beispiele:
-- [LCD Projekte am Raspberry Pi](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi5/lcd)
-
+- [Arduino: LCD Display mit DHT11](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/lcd_dht11)
+- [Raspberry Pi: LCD Projekte](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi5/lcd)

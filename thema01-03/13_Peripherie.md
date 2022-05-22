@@ -1,5 +1,10 @@
 # Peripherie
 
+- [Echtzeituhr](#echtzeituhr)
+- [NFC-Kartenleser](#nfc-kartenleser)
+- [SD-Karte am Arduino](#sd-karte-am-arduino)
+- [SD-Karte am Raspberry Pi](#sd-karte-am-raspberry-pi)
+
 ## Echtzeituhr
 
 * Wir verwenden folgende Echtzeituhr: DS3231
@@ -92,3 +97,196 @@ void loop() {
 Beispiele:
 - [Arduino: NFC-Kartenleser mit LED Steuerung](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/nfc_led)
 - [Arduino: NFC-Kartenleser mit LED und Taster Steuerung](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/nfc_led_taster)
+
+## SD-Karte am Arduino
+
+Grundaufbau:
+
+```c
+#include <SD.h>
+
+File myFile;
+
+void sdCardSetup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+  
+  Serial.println("Initializing SD card...");
+  if (!SD.begin(SDCARD_PIN)) {
+    Serial.println("Initialization failed!");
+    while (1);
+  }
+  Serial.println("Initialization done.");
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  myFile = SD.open("test.txt", FILE_WRITE);
+  Serial.println("Open File succeeded.");
+}
+
+void setup() {
+  // setup sd card
+  sdCardSetup();
+
+  // set csv header
+  myFile.println("test message");
+
+  // close file
+  myFile.close();
+}
+```
+
+- [SD Karte mit LDR Sensor](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/sdcard_arduino/)
+
+## SD-Karte am Raspberry Pi
+
+### SDIO-Einheit aktivieren
+
+Um die sekundäre SDIO-Einheit auf die Raspberry Pi Pins zu aktivieren, muss folgendes in die Bootconfig geschrieben werden:
+
+```
+pi@raspi-it-01:~# nano /boot/config.txt
+——————————————————————————————————————————————————————
+...
+dtoverlay=sdio,poll_once=off,bus_width=1
+...
+```
+
+### Software installieren
+
+Für das weitere Vorgehen, benötigt man den „Device Tree Compiler“ am Raspberry Pi. Um sicher zu gehen, dass die neueste Version installiert wird, laden wir uns die neuen Packetlisten herunter und installieren ausstehende Updates.
+
+```
+pi@raspi-it-01:~# sudo apt update
+
+pi@raspi-it-01:~# sudo apt dist-upgrade -y
+
+pi@raspi-it-01:~# sudo apt install device-tree-compiler -y
+```
+
+### Device Tree konfigurieren
+
+Es muss ein neues File für die SPI (Serial Peripheral Interface) Bus erstellt werden.
+
+```
+pi@raspi-it-01:~# nano mmc_spi.dts
+——————————————————————————————————————————————————————
+
+/dts-v1/;
+/plugin/;
+
+/ {
+   compatible = "brcm,bcm2835", "brcm,bcm2836", "brcm,bcm2708", "brcm,bcm2709";
+
+   fragment@0 {
+      target = <&spi0>;
+      frag0: __overlay__ {
+         status = "okay";
+         sd1 {
+                reg = <0>;
+                status = "okay";
+                compatible = "spi,mmc_spi";
+                voltage-ranges = <3000 3500>;
+                spi-max-frequency = <8000000>;
+         };
+      };
+   };
+};
+```
+
+Um das File dem Bootloader vom Raspberry Pi zur Verfügung zu stellen, muss das File kompiliert werden.
+
+```
+pi@raspi-it-01:~# dtc -@ -I dts -O dtb -o mmc_spi.dtbo mmc_spi.dts
+```
+
+Das mit dem oben genannten Befehl erstellte Datei, muss in den Overlays Ordner des Bootloaders verschoben werden. Dazu werden Sudo- beziehungsweise Rootrechte benötigt.
+
+```
+pi@raspi-it-01:~# sudo cp mmc_spi.dtbo /boot/overlays/
+```
+
+Damit die kompilierte Datei vom Bootloader berücksichtigt wird, müssen noch zwei Konfigurationszeilen im Bootconfig-File hinzugefügt werden.
+
+```
+pi@raspi-it-01:~# sudo nano /boot/config.txt
+——————————————————————————————————————————————————————
+
+...
+dtoverlay=mmc_spi
+dtparam=spi=off
+```
+
+Nun kann der Raspberry Pi neugestartet werden.
+
+### Partition auf SD Karte erstellen
+
+Zuerst kann man die vorhandenen Partitionen auflisten, um herauszufinden, welche Disk beziehungsweise Partition von uns formatiert wird.
+
+```
+root@raspi-it-01:~# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mmcblk0     179:0    0  7.4G  0 disk
+├─mmcblk0p1 179:1    0  256M  0 part /boot
+└─mmcblk0p2 179:2    0  7.1G  0 part /
+mmcblk2     179:32   0 14.4G  0 disk
+└─mmcblk2p1 179:33   0 14.4G  0 part
+```
+
+Die oben markierte Disk formatieren wir jetzt mit ext4.
+
+```
+root@raspi-it-01:~# mkfs.ext4 /dev/mmcblk2
+mke2fs 1.44.5 (15-Dec-2018)
+Found a dos partition table in /dev/mmcblk2
+Proceed anyway? (y,N) y
+Discarding device blocks: done
+Creating filesystem with 3780608 4k blocks and 946560 inodes
+Filesystem UUID: 4f893e48-7019-4870-a44f-1838fb3d5f7f
+Superblock backups stored on blocks:
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:
+done
+```
+
+### Einbinden des EXT4-Dateisystems
+
+Zuerst muss das Zielverzeichnis erstellt werden und die benötigten Zugriffsrechte für den Benutzer „pi“ geben.
+
+```
+root@raspi-it-01:~# mkdir /media/sd0/
+
+root@raspi-it-01:~# chmod 775 /media/sd0/
+
+root@raspi-it-01:~# chown pi:pi /media/sd0/
+```
+
+Anschließend kann die Disk auf in das Verzeichnis gemountet werden.
+
+```
+root@raspi-it-01:~# mount -t ext4 /dev/mmcblk2 /media/sd0/ -o user=pi
+```
+
+### Überprüfen der Konfiguration
+
+Man kann sich nach der erfolgreichen Konfiguration, den Mountpoint anzeigen lassen.
+
+```
+root@raspi-it-01:~# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mmcblk0     179:0    0  7.4G  0 disk
+├─mmcblk0p1 179:1    0  256M  0 part /boot
+└─mmcblk0p2 179:2    0  7.1G  0 part /
+mmcblk2     179:32   0 14.4G  0 disk /media/sd0
+```
+
+### Software
+
+- [SD Karten Projekte](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi5/sdcard/)
