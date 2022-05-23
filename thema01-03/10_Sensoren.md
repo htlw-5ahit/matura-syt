@@ -14,10 +14,6 @@
 
 Der digitale Taster ist über eine Platine mit Breakout Platine verbunden.
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/taster.png) | ![](./assets/taster_aufbau.png) |
-
 Beispiele:
 - [Arduino: LED mit Button](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/button)
 
@@ -33,7 +29,34 @@ Der Drehgeber hat zwei Aufgaben
 * DT und CLK werden benutzt, um eine Rotation des Drehgebers zu erkennen
 * SW ist dafür da, um zu erkennen, ob der Drehgeber gedrückt wurde oder nicht
 
-![](./assets/drehgeber.png)
+Code:
+
+```c
+#include <Encoder.h>    // Verwendung der <Encoder.h> Bibliothek 
+
+#define CLK 2
+#define  DT A2
+
+long altePosition = -999; 
+long zaehler = altePosition;
+
+Encoder meinEncoder(DT, CLK);
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  long neuePosition = meinEncoder.read();
+
+  // Ist die neue Position ungleich der alten (-999) und ein Vielfaches von 4?
+  if (neuePosition != altePosition && neuePosition % 4 == 0) {
+    altePosition = neuePosition;
+    zaehler = neuePosition / 4;
+    Serial.println(zaehler);
+  }
+}
+```
 
 Beispiele:
 - [Arduino: Drehgeber](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/drehgeber)
@@ -46,9 +69,25 @@ Der Joystick hat drei Aufgaben:
 * Auslesen der Position des Joysticks in y-Richtung
 * Auslesen, ob der Joystick gedrückt wird oder nicht
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/joystick.png) | ![](./assets/joystick_aufbau.png) |
+Code:
+```c
+#define AXIS_X A1
+#define AXIS_Y A2
+
+void setup() {
+  Serial.begin(115200); 
+}
+
+void loop() {
+  int axis_x = analogRead(AXIS_X) - 512;
+  int axis_y = analogRead(AXIS_Y) - 512;
+
+  Serial.print("X-Achse: ");
+  Serial.println(axis_x);
+  Serial.print("Y-Achse: ");
+  Serial.println(axis_y);
+}
+```
 
 Beispiele:
 - [Arduino: Fade mit Joystick](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/joystick_fade/)
@@ -64,9 +103,59 @@ Zur Messung der Feuchte existieren im Feuchtigkeitssensor zwei Elektroden mit ei
 
 Ein Thermistor ist eigentlich ein veränderlicher Widerstand, der seinen Widerstand bei Änderung der Temperatur ändert. Diese Sensoren werden durch Sintern von Halbleitermaterialien wie Keramik oder Polymeren hergestellt, um größere Widerstandsänderungen bei geringen Temperaturänderungen zu erreichen. Der Begriﬀ “NTC” bedeutet “Negativer Temperaturkoeﬃzient”, was bedeutet, dass der Widerstand mit zunehmender Temperatur abnimmt.
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/dht11.png) | ![](./assets/dht11_aufbau.png) |
+Code:
+
+```c
+#include "DHT.h"
+
+#define DHTPIN A0     // Digital pin connected to the DHT sensor
+#define DHTTYPE DHT11   // DHT 11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+unsigned long previousMillis = 0;
+const long interval = 1100;
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+}
+
+void loop() {
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+    sensor();
+  }
+}
+
+void sensor() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  float f = dht.readTemperature(true);
+
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
+
+  float hif = dht.computeHeatIndex(f, h);
+  float hic = dht.computeHeatIndex(t, h, false);
+
+  Serial.print(F("Humidity: "));
+  Serial.print(h);
+  Serial.print(F("%  Temperature: "));
+  Serial.print(t);
+  Serial.print(F("°C "));
+  Serial.print(f);
+  Serial.print(F("°F  Heat index: "));
+  Serial.print(hic);
+  Serial.print(F("°C "));
+  Serial.print(hif);
+  Serial.println(F("°F"));
+}
+```
 
 Beispiele:
 - [Arduino: DHT11](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/dht11/)
@@ -78,10 +167,25 @@ Ein NTC-Widerstand (Negative Temperature Coeﬃcient Thermistor) ist ein tempera
 
 NTCs dienen als Temperatursensor oder als Einschaltstrombegrenzer. Um die typisch perlenförmigen Temperatursensor-NTCs zu kontaktieren, kommen Drähte aus einer Platinlegierung oder aus Nickel/Eisen zum Einsatz.[2] Sie verbinden sich beim Sintern der Perle mit dem NTC-Material. Andere Bauformen sind Scheiben, SMD-Chips oder zylindrische Formen sie werden mittels metallisierter Oberﬂächen kontaktiert.
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/ntc.png) | ![](./assets/ntc_aufbau.png) |
+Code:
 
+```c
+#define NTC_PIN A0
+
+int ntcValue = 0;
+
+void setup() {
+    Serial.begin(115200);
+}
+
+void loop() {
+    ntcValue = analogRead(NTC_PIN);
+    Serial.println(ntcValue);
+    delay(100);
+}
+```
+
+Beispiele:
 - [Arduino: Temperatursensor mit SteinhartHart](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/steinharthart)
 - [Raspberry Pi: ADS1115](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/ads1115.c)
 - [Raspberry Pi: DS18B20](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/ds18b20.c)
@@ -96,9 +200,23 @@ Je mehr Licht auf den Fotowiderstand fällt, desto kleiner wird sein elektrische
 
 Fotowiderstände werden beispielsweise in Belichtungsmessern und in Dämmerungsschaltern eingesetzt, um mit geringem technischem Aufwand auch geringe Beleuchtungsstärken messen zu können – die spektrale Empﬁndlichkeit stimmt gut mit der Hellempﬁndlichkeitskurve des Auges überein. Die Verwendung bietet sich an, wenn keine schnellen Reaktionszeiten gefordert sind.
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/ldr.png) | ![](./assets/ldr_aufbau.png) |
+Code:
+
+```c
+#define LDR_PIN A0
+
+int ldrValue = 0;
+
+void setup() {
+    Serial.begin(115200);
+}
+
+void loop() {
+    ldrValue = analogRead(LDR_PIN);
+    Serial.println(ldrValue);
+    delay(100);
+}
+```
 
 Beispiele:
 - [Raspberry Pi: BH1750](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/bh1750.c)
@@ -114,16 +232,34 @@ Der Ultraschallsensor HC-SR04 benötigt zunächst eine Versorgungsspannung von 5
 
 Auch ein für den Mensch nicht hörbarer Ultraschallton ist ein akustischer Schall. Er verhält sich demnach entsprechend den physikalischen Gesetzen. Der Schall hat eine bestimmte Geschwindigkeit, er legt in der Sekunde 330 Meter zurück. Wenn man also weiß wie lange es dauert bis der Ultraschallsensor sein eigenes Echo empfängt, dann kann man leicht ausrechnen wieviel Meter bzw. auch Zentimeter der Schall zurückgelegt hat. Diese errechnete Entfernung muss man dann allerdings noch durch 2 teilen, denn wir wollen ja nur die einmalige Wegstrecke berechnen und nicht den gesamten Hin- und Rückweg.
 
+Code:
+
+```c
+#include <NewPing.h>
+2.	 
+#define TRIGGER_PIN     12
+#define ECHO_PIN        11
+#define MAX_DISTANCE    200
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+void setup() {
+    Serial.begin(115200);
+}
+
+void loop() {
+    delay(50);
+    Serial.print("Ping: ");
+    Serial.print(sonar.ping_cm());
+    Serial.println("cm");
+}
+```
 
 Beispiele:
 - [Arduino: Entfernungsmessung mit NewPing](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/entfernungsmessung)
 - [Arduino: Bewegungs- & Entfernungsmessung](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/bewegungs_entfernungsmessung)
 - [Arduino: Entfernungsmessung mit einstellbarerer Distanz](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/entfernungsmessung_distanz)
 - [Raspberry Pi: HC-SRO4](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/hc-sr04.c)
-
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/hcsro4.png) | ![](./assets/hcsro4_aufbau.png) |
 
 ## Bewegungssensor
 
@@ -135,9 +271,21 @@ Solche Infarot-Bewegungsmelder (meist nur "Bewegungsmelder" genannt) dienen oft 
 
 Damit aber nicht statische Wärmequellen (besonntes Fenster, Heizkörper etc.) den Senso triggern, regieren solche Sensoren auf bewegliche Wärmequellen. Damit das funktioniert, ist eine FesnelLinse vor dem Sensor augeordnet. Das folgende Bild zeigt den PIR-Sensor auf der Platine und daneben die abgenommene Fresnel-Linse.
 
-| Sensor | Aufbau |
-|--------|--------|
-| ![](./assets/hcsr501.png) | ![](./assets/hcsr501_aufbau.png) |
+```c
+#define SENSOR_PIN  8
+#define LED_PIN     13
+ 
+void setup() {
+    Serial.begin(9600);
+    pinMode(SENSOR_PIN, INPUT);
+    pinMode(LED_PIN, OUTPUT);
+}
+ 
+void loop() {
+    int s = digitalRead(pirPin);
+    digitalWrite(ledPin, s);
+}
+```
 
 Beispiele:
 - [Arduino: Bewegungssensor](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/bewegungssensor)

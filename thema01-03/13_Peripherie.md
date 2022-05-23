@@ -24,25 +24,25 @@ RTCDateTime dt;
 char timeStr[LEN_STR];
 
 void setup() {
-  Serial.begin(112500);
+  Serial.begin(112500);
 
-  // Initialize DS3231
-  Serial.println("Initialize DS3231");
-  clock.begin();
+  // Initialize DS3231
+  Serial.println("Initialize DS3231");
+  clock.begin();
 
-  // Set date and time
-  // clock.setDateTime(2020-09-29, 09-00-00-00);
+  // Set date and time
+  // clock.setDateTime(2020-09-29, 09-00-00-00);
 }
 
 void loop() {
-  dt = clock.getDateTime();
+  dt = clock.getDateTime();
 
-  sprintf(timeStr, „%04d-%02d-%02d %02d-%02d-%02d",
-    dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second
-  );
-  Serial.println(timeStr);
-  
-  delay(1000);
+  sprintf(timeStr, "%04d-%02d-%02d %02d-%02d-%02d",
+    dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second
+  );
+  Serial.println(timeStr);
+
+  delay(1000);
 }
 ```
 
@@ -63,16 +63,14 @@ void loop() {
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 void setup() {
-  
   Serial.begin(115200); // Initialize serial communications with the PC
   while (!Serial); // Do nothing if no serial port is opened
 
-  
   SPI.begin(); // Init SPI bus
   mfrc522.PCD_Init(); // Init MFRC522
   delay(4); // Optional delay. Some board do need more time after init to be ready
 
-  // Show details of PCD - MFRC522 Card Reader details
+  // Show details of PCD - MFRC522 Card Reader details
   mfrc522.PCD_DumpVersionToSerial();
   Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));
 }
