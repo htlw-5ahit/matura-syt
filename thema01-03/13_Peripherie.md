@@ -1,7 +1,7 @@
 # Peripherie
 
 - [Echtzeituhr](#echtzeituhr)
-- [NFC-Kartenleser](#nfc-kartenleser)
+- [RFID](#rfid)
 - [SD-Karte am Arduino](#sd-karte-am-arduino)
 - [SD-Karte am Raspberry Pi](#sd-karte-am-raspberry-pi)
 
@@ -46,7 +46,7 @@ void loop() {
 }
 ```
 
-## NFC-Kartenleser
+## RFID
 
 * Folgenden Baustein haben wir verwendet: MFRC-522. Die dafür verwendete Library heißt „MFRC522“ und wird von der Github Community bereitgestellt.
 * Der RFID („radio-frequency identiﬁcation“) Reader wird verwendet, um von RFID Sendern (auch „RFID Tags“ genannt) per Funk einen bestimmten Code auszulesen. Jeder Sender hat dabei nur einen einmaligen ganz individuellen Code.
@@ -287,6 +287,6 @@ mmcblk0     179:0    0  7.4G  0 disk
 mmcblk2     179:32   0 14.4G  0 disk /media/sd0
 ```
 
-### Software
+### Beispiele
 
-- [SD Karten Projekte](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi5/sdcard/)
+- [SD Karten Beispiele](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi5/sdcard/)
