@@ -117,43 +117,43 @@ unsigned long previousMillis = 0;
 const long interval = 1100;
 
 void setup() {
-  Serial.begin(115200);
-  dht.begin();
+    Serial.begin(115200);
+    dht.begin();
 }
 
 void loop() {
-  unsigned long currentMillis = millis();
+    unsigned long currentMillis = millis();
 
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis;
-    sensor();
-  }
+    if (currentMillis - previousMillis >= interval) {
+        previousMillis = currentMillis;
+        sensor();
+    }
 }
 
 void sensor() {
-  float h = dht.readHumidity();
-  float t = dht.readTemperature();
-  float f = dht.readTemperature(true);
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
+    float f = dht.readTemperature(true);
 
-  if (isnan(h) || isnan(t) || isnan(f)) {
-    Serial.println(F("Failed to read from DHT sensor!"));
-    return;
-  }
+    if (isnan(h) || isnan(t) || isnan(f)) {
+        Serial.println(F("Failed to read from DHT sensor!"));
+        return;
+    }
 
-  float hif = dht.computeHeatIndex(f, h);
-  float hic = dht.computeHeatIndex(t, h, false);
+    float hif = dht.computeHeatIndex(f, h);
+    float hic = dht.computeHeatIndex(t, h, false);
 
-  Serial.print(F("Humidity: "));
-  Serial.print(h);
-  Serial.print(F("%  Temperature: "));
-  Serial.print(t);
-  Serial.print(F("°C "));
-  Serial.print(f);
-  Serial.print(F("°F  Heat index: "));
-  Serial.print(hic);
-  Serial.print(F("°C "));
-  Serial.print(hif);
-  Serial.println(F("°F"));
+    Serial.print(F("Humidity: "));
+    Serial.print(h);
+    Serial.print(F("%  Temperature: "));
+    Serial.print(t);
+    Serial.print(F("°C "));
+    Serial.print(f);
+    Serial.print(F("°F  Heat index: "));
+    Serial.print(hic);
+    Serial.print(F("°C "));
+    Serial.print(hif);
+    Serial.println(F("°F"));
 }
 ```
 
@@ -236,7 +236,7 @@ Code:
 
 ```c
 #include <NewPing.h>
-2.	 
+
 #define TRIGGER_PIN     12
 #define ECHO_PIN        11
 #define MAX_DISTANCE    200
