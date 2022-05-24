@@ -25,13 +25,13 @@
 ## 6. Web Persistenz und Cloud
 ## 7. Server und Serverdienste
 
-1. Verzeichnisdienste mit LDAP
-2. Internet Information Services
-3. DHCP für mehrere Netze
+1. [Verzeichnisdienste mit LDAP](./thema07/kap01.md)
+2. [Internet Information Services (IIS)](./thema07/kap02.md)
+3. [DHCP für mehrere Netze](./thema07/kap03.md)
 
 ## 8. IT-Security
 
 1. Firewallkonzepte (REFR)
 2. Kryptographie (REFR)
-3. Paketfilter mit IP-Tables (ELSI)
-4. Virtual Private Network (ELSI)
+3. [Paketfilter mit IP-Tables (ELSI)](./thema08/kap03.md)
+4. [Virtual Private Network (ELSI)](./thema08/kap04.md)
