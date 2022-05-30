@@ -11,3 +11,5 @@ Geben sie zunächst einen Überblick über das Prinzip von VPN und Arten von VPN
 
 Erklären sie weiters, das Prinzip von Zertifikaten, wie sie ein Zertifikat erhalten, wie man Zertifikate erstellen kann,
 wie erhalten sie ein öffentliches Zertifikat. Erklären sie den Inhalt von Zertifikaten und zeigen sie PKI auf (Skizze).
+
+- [Ausarbeitung von Simon M.](./VPN_Ausarbeitung_Modl.pdf)
