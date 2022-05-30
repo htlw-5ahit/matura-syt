@@ -17,7 +17,7 @@
 ## Rolle von CSS
 
 * Gestaltung von Website (Design, Layout, Reaktion auf Eingaben, …) 
-* *Gestaltung in HTML Code direkt oder in externer CSS-Datei
+* Gestaltung in HTML Code direkt oder in externer CSS-Datei
 
 ## Selektoren - Arten - Beispiele für den Einsatz
 
@@ -34,7 +34,7 @@
             <td>Typenselektor</td>
             <td>Alle Elemente eines Typs werden angesprochen</td>
             <td>
-                ```css
+                <code>
                     h1 { 
                         color: red; 
                     }
@@ -42,21 +42,21 @@
                         background-color: #ccc;
                         border-radius: .5em; 
                     }
-                ```
+                </code>
             </td>
         <tr>
         <tr>
             <td>Klassenselektor</td>
             <td>Ein Klassenselektor spricht Elemente an, die einer bestimmten Klasse zugehörend sind.</td>
             <td>
-                ```html
+                <code>
                     <style>
                         .beispiel {font-style: italic;}
                         .beispiel.hinweis {color: green;}
                     </style>
                     <p class="beispiel">Dieser Absatz gehört zur Klasse beispiel und seine Schrift wird deshalb kursiv dargestellt.</p>
                     <p class="beispiel hinweis">Dieser Absatz gehört sowohl zur Klasse beispiel als auch zur Klasse hinweis und sein Text wird deshalb grün und kursiv dargestellt.</p>
-                ```
+                </code>
             </td>
         <tr>
         <tr>
