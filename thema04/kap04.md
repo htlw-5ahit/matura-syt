@@ -44,7 +44,7 @@ Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selekto
 
 ## Anforderungen an den Browser
 
-* Richtige interpretieren des CSS-Codes
+* Richtiges interpretieren des CSS-Codes
 * Problem: Browserkompatibilität nicht bei allen CSS-Befehlen vorhanden.
 
 ## Was besagt das Flexboxmodell und wie wirkt sich dieser in der praktischen Arbeit aus.
@@ -78,28 +78,67 @@ Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selekto
 
 ## Welche Unterstützung bieten Frameworks wie Bootstrap an?
 
-
+* Bootstrap ist ein Frontend-Framework
+* Diverse Gestaltungsvorlagen, die auf HTML und CSS basieren, sowie optionale JavaScript-Erweiterungen
+* Wichtige Komponente: Bootstrap-Grid-Layout
+    * Aufteilung des Layouts in 12 Spalten
+    * Erleichtert Abstände und Positionierung der einzelnen Website-Elemente punktgenau zu bestimmen
+* Unterstützung des Responsive Webdesigns
 
 ## Welche Möglichkeiten bietet dieses Framework und welche Problembereiche werden damit abgedeckt?
 
-
+* Buttons
+* Typographie
+* Tabellen
+* Formulare
+* Navigationselemnte & -bar
+* Indikatoren wie Alerts, Prozessbar, ...
+* Container
+* Modals
+* ...
 
 ## Wer ist der Eigentümer der Bootstrap-Technologie und welche lizenzrechtlichen Vorkehrungen sind zu beachten?
 
+* Lizenz: MIT-Lizenz
+* Entwickler: Twitter
 
+* Anforderungen an den Nutzer
+    * Die Lizenzmarkierungen müssen in allen genutzten Dateien von Bootstrap beibehalten werden
+* Erlaubter Nutzen für des Nutzers
+    * Gratis Download und Nutzen für private, geschäftliche, persönliche oder unternehmensinterne Anwendungen
+    * Weiterverarbeitung von Bootstrap
+    * Bearbeiten des Ausgangsmaterials
+* Verbot für den Benutzer
+    * Einreichen für Beschwerden bei Problemen, Bootstrap wird ohne Gewährleistung veröffentlicht
+    * Anzeige gegen die Urheber oder Urheberrechtsinhaber von Bootstrap 
+    * Löschen von Markenzeichen, die den Nutzen von Bootstrap symbolisieren
 
 ## Wo kann ich mich hinwenden, wenn es Probleme gibt?
 
-
+* An die Entwickler-Community via GitHub
+* [https://github.com/twbs/bootstrap/discussions](https://github.com/twbs/bootstrap/discussions)
 
 ## Vor-/Nachteil von Bootstrap
 
-
+* Vorteile
+    * Responsive Design
+    * Kürzere Entwicklungszeit
+    * Templates
+    * Verweendung von Icons
+    * Dokumentation
+    * Freie Verwendbarkeit
+* Nachteile
+    * Bei kleinen Projekten, viel Overhead
 
 ## Aweseome Fonts
 
-
+* Bibliothek von vielen verschiedenen Icons
+* kostenlose sowie kostenpflichtige Version
+* 5 Symbolstile: Solid, Regular, Light, Duoton und Thin 
 
 ## Anfoderungen an den Layouter
 
-
+* Einheitliches Layout für die ganze Webseite
+    * Fonts, Schriftgrößen, Farben, ..
+* Übersichtliche Navigation
+* Planung vor Entwicklung!
