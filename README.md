@@ -32,6 +32,8 @@
 1. [Eigenheiten der WebProgrammierung](./thema05/kap01.md)
 2. [Serverseitiges JavaScript](./thema05/kap02.md)
 3. [Einsatz von Frameworks wie React, Vue, Angular](./thema05/kap03.md)
+4. [Java/ECMA-script](./thema05/kap04.md)
+5. [Nebenläufigkeiten & Asynchronitäten](./thema05/kap05.md)
 
 ## 6. Web Persistenz und Cloud
 
