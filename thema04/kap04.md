@@ -63,10 +63,10 @@ Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selekto
 
 | Typ | Darstellung | CSS-Befehl |
 |---|---|---|
-| `flex-direction` | ![](https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg) | `flex-direction: row | row-reverse | column | column-reverse;` |
-| `justify-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg) | `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;` |
-| `align-items` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg) | `align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe` |
-| `align-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg) | `align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;` |
+| `flex-direction` | <img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg" width="350"> | ```flex-direction: row | row-reverse | column | column-reverse;``` |
+| `justify-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg) | ```justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;``` |
+| `align-items` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg) | ```align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe``` |
+| `align-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg) | ```align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;``` |
 
 ## Komplexität von CSS
 
