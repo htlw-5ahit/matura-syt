@@ -70,11 +70,21 @@ Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selekto
 
 ## Komplexität von CSS
 
-
+?
 
 ## Vererbung/Fehlerbehandlung/Debugging
 
+Vererbung
 
+* Konzept der Vererbung wurde mit CSS 2 eingeführt
+* Übertragung der deklarierten CSS-Werte von einem Element auf das nachfolgende
+* Jedes Element des Dokuments seine Werte an seine Kind-Elemente weiter
+* Vorteil: Regeln für Kindelemente muss die Regel nun nicht mehr neu definiert werden
+
+Fehlerbehandlung / Debugging
+
+* Überprüfung mit Developer-Tools, welche im Browser eingebaut sind (Rechtsklick > "Untersuchen")
+* Aktivierung/Deaktivieren einzelner CSS-Regeln bzw. hinzufügen neuer Regeln
 
 ## Welche Unterstützung bieten Frameworks wie Bootstrap an?
 
