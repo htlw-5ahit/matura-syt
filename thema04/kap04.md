@@ -21,68 +21,52 @@
 
 ## Selektoren - Arten - Beispiele für den Einsatz
 
-<table>
-    <thead>
-        <tr>
-            <td>Typ</td>
-            <td>Beschreibung</td>
-            <td>Beispiel</td>
-        <tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Typenselektor</td>
-            <td>Alle Elemente eines Typs werden angesprochen</td>
-            <td>
-                <code>
-                    h1 { 
-                        color: red; 
-                    }
-                    h1, h2 { 
-                        background-color: #ccc;
-                        border-radius: .5em; 
-                    }
-                </code>
-            </td>
-        <tr>
-        <tr>
-            <td>Klassenselektor</td>
-            <td>Ein Klassenselektor spricht Elemente an, die einer bestimmten Klasse zugehörend sind.</td>
-            <td>
-                <code>
-                    <style>
-                        .beispiel {font-style: italic;}
-                        .beispiel.hinweis {color: green;}
-                    </style>
-                    <p class="beispiel">Dieser Absatz gehört zur Klasse beispiel und seine Schrift wird deshalb kursiv dargestellt.</p>
-                    <p class="beispiel hinweis">Dieser Absatz gehört sowohl zur Klasse beispiel als auch zur Klasse hinweis und sein Text wird deshalb grün und kursiv dargestellt.</p>
-                </code>
-            </td>
-        <tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        <tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        <tr>
-    </tbody>
-</table>
+| Typ               | Beispiel                                                                                                                           |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Typ-Selektor      | [Beispiel](https://wiki.selfhtml.org/extensions/Selfhtml/frickl.php/Beispiel:CSS-Einstieg-1.html#view_result)                      |
+| Klassenselektor   | [Beispiel](https://wiki.selfhtml.org/extensions/Selfhtml/frickl.php/Beispiel:CSS_grundlagen_klassenselektor.html#view_result)      |
+| ID-Selektor       | [Beispiel](https://wiki.selfhtml.org/extensions/Selfhtml/frickl.php/Beispiel:CSS_grundlagen_id-selektor.html#view_result)          |
+| Universalselektor | [Beispiel](https://wiki.selfhtml.org/extensions/Selfhtml/frickl.php/Beispiel:CSS_universalselektor.html#view_result)               |
+| Attributselektor  | [Beispiel](https://wiki.selfhtml.org/extensions/Selfhtml/frickl.php/Beispiel:CSS_grundlagen_attributpr%C3%A4senz.html#view_result) |
+
+### Pseudoklassen
+
+Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selektor gestellt wird, um einen besonderen Zustand abzufragen. 
+
+* `:active`
+* `:checked`
+* `:default`
+* `:disabled`
+* `:enabled`
+* `:focus`
+* `:hover`
+* ... ([alle weiteren Pseudoklassen](https://developer.mozilla.org/de/docs/Web/CSS/Pseudo-classes))
 
 ## Anforderungen an den Browser
 
-
+* Richtige interpretieren des CSS-Codes
+* Problem: Browserkompatibilität nicht bei allen CSS-Befehlen vorhanden.
 
 ## Was besagt das Flexboxmodell und wie wirkt sich dieser in der praktischen Arbeit aus.
 
+* Flexible Box Layout Module
+* wesentliche Technik zur Gestaltung von Layouts mit CSS
+* sehr mächtige und komfortable Anwendung
 
+* Container die Möglichkeit geben, die Breite/Höhe (und Reihenfolge) seiner Elemente zu ändern, um den verfügbaren Platz optimal auszufüllen
+* Im Gegensatz zu den regulären Layouts (Block (vertikal basiert), Inline (horizontal basiert)) richtungsunabhängig ist
+* Elemente entlang der Hauptachse bzw. der Querachse angeordnet
+
+<img src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg" width="350">
 
 ## Welche CSS-Anweisungen sind symptomatisch für das Flexboxmodell
 
-
+| Typ | Darstellung | CSS-Befehl |
+|---|---|---|
+| `flex-direction` | ![](https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg) | `flex-direction: row | row-reverse | column | column-reverse;` |
+| `justify-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg) | `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;` |
+| `align-items` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg) | `align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe` |
+| `align-content` | ![](https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg) | `align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;` |
 
 ## Komplexität von CSS
 
