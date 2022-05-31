@@ -45,27 +45,38 @@ Durch den Feldmagneten (Dauer- oder Elektromagnet) wird ein magnetisches Feld au
 ![](./assets/dcmotor.png)
 
 ```c
+#define SLIDER A0
+#define BUTTON 2
+#define MOTOR_FORWARD 06
+#define MOTOR_BACKWARD 04
+#define MOTOR_PWM 03
+
+float sliderValue = 0;
+boolean directionForward = true;
+
 void setup() {
-	pinMode(3, OUTPUT);
-	pinMode(4, OUTPUT);
+  pinMode(SLIDER, INPUT);
+  pinMode(BUTTON, INPUT);
+
+  pinMode(MOTOR_FORWARD, OUTPUT);
+  pinMode(MOTOR_BACKWARD, OUTPUT);
+  
+  pinMode(MOTOR_PWM, OUTPUT);
 }
 
 void loop() {
-	// set LOW, to rotate forward
-	digitalWrite(4, LOW);
-	// set speed
-	analogWrite(3, 70);
+  sliderValue = analogRead(SLIDER);
 
-	// wait
-	delay(200);
+  // forwaerts / rueckwaerts schalten des motors via button
+  if (digitalRead(BUTTON) == HIGH) {
+    directionForward = !directionForward;
+    delay(100);
+  }
 
-	// set HIGH, to rotate backwards
-	digitalWrite(4, HIGH);
-	// set speed
-	analogWrite(3, 100);
-
-	// wait
-	delay(200);
+  analogWrite(MOTOR_PWM, sliderValue / 4);
+  
+  digitalWrite(MOTOR_FORWARD, directionForward);
+  digitalWrite(MOTOR_BACKWARD, !directionForward);
 }
 ```
 

@@ -25,13 +25,8 @@ char timeStr[LEN_STR];
 
 void setup() {
   Serial.begin(112500);
-
-  // Initialize DS3231
   Serial.println("Initialize DS3231");
   clock.begin();
-
-  // Set date and time
-  // clock.setDateTime(2020-09-29, 09-00-00-00);
 }
 
 void loop() {
@@ -269,7 +264,7 @@ root@raspi-it-01:~# chown pi:pi /media/sd0/
 Anschließend kann die Disk auf in das Verzeichnis gemountet werden.
 
 ```
-root@raspi-it-01:~# mount -t ext4 /dev/mmcblk2 /media/sd0/ -o user=pi
+root@raspi-it-01:~# mount -t ext4 /dev/mmcblk2 /media/sd0/ -o uid=pi,gid=pi,user=pi
 ```
 
 ### Überprüfen der Konfiguration

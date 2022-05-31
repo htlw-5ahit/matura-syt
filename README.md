@@ -2,7 +2,7 @@
 
 ## 1. Mikrocontroller - Anzeige und Bedienung
 
-1. [Ansteuerung von visuellen Anzeigen (LED, LCD, 7-Segment, blinken, ...) `auch am Raspberry Pi`](./thema01-03/README.md)
+1. [Ansteuerung von visuellen Anzeigen (LED, LCD, ...) `auch am Raspberry Pi`](./thema01-03/README.md)
 2. [Nutzung analoger und digitaler Eingabegeräte (Taster, Joystick, ...) `auch am Raspberry Pi`](./thema01-03/README.md)
 3. [Bereitstellung von Information/Werten über die serielle Schnittstelle](./thema01-03/README.md)
 4. [Übernahme von Kommandos/Werten über die serielle Schnittstelle](./thema01-03/README.md)
