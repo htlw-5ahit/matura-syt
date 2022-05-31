@@ -1,9 +1,8 @@
 #define SLIDER A0
 #define BUTTON 2
-#define MOTOR_DIR 04
+#define MOTOR_FORWARD 06
+#define MOTOR_BACKWARD 04
 #define MOTOR_PWM 03
-
-Servo servo1;
 
 float sliderValue = 0;
 boolean directionForward = true;
@@ -12,7 +11,9 @@ void setup() {
   pinMode(SLIDER, INPUT);
   pinMode(BUTTON, INPUT);
 
-  pinMode(MOTOR_DIR, OUTPUT);
+  pinMode(MOTOR_FORWARD, OUTPUT);
+  pinMode(MOTOR_BACKWARD, OUTPUT);
+  
   pinMode(MOTOR_PWM, OUTPUT);
 }
 
@@ -26,5 +27,7 @@ void loop() {
   }
 
   analogWrite(MOTOR_PWM, sliderValue / 4);
-  digitalWrite(MOTOR_DIR, directionForward);
+  
+  digitalWrite(MOTOR_FORWARD, directionForward);
+  digitalWrite(MOTOR_BACKWARD, !directionForward);
 }
