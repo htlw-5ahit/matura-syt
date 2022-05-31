@@ -4,8 +4,6 @@
 #define MOTOR_BACKWARD 04
 #define MOTOR_PWM 03
 
-Servo servo1;
-
 float sliderValue = 0;
 boolean directionForward = true;
 
