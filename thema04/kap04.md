@@ -70,7 +70,8 @@ Eine Pseudoklasse in CSS ist ein Schlüsselbegriff, welcher hinter einen Selekto
 
 ## Komplexität von CSS
 
-?
+* CSS- Layout ist schwer umzusetzen
+* Bootstrap vereinfacht diesen Prozess
 
 ## Vererbung/Fehlerbehandlung/Debugging
 
@@ -144,7 +145,8 @@ Fehlerbehandlung / Debugging
 
 * Bibliothek von vielen verschiedenen Icons
 * kostenlose sowie kostenpflichtige Version
-* 5 Symbolstile: Solid, Regular, Light, Duoton und Thin 
+* 5 Symbolstile: Solid, Regular, Light, Duoton und Thin
+* Look & Feel wie bei Smartphone-Anwendungen
 
 ## Anfoderungen an den Layouter
 

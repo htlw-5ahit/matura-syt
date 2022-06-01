@@ -10,6 +10,7 @@
 Das Schichtenmodell, das OSI/ISO Modell, besteht aus sieben Schichten. Diese lassen sich in viele verschiedene Kategorien einteilen.
 
 ![](./OSI_ISO_Schichten.png)
+
 Quelle: [https://de.wikipedia.org/wiki/OSI-Modell](https://de.wikipedia.org/wiki/OSI-Modell)
 
 ## Protokollstack
@@ -117,7 +118,9 @@ Quelle: [https://de.wikipedia.org/wiki/Protokollstapel](https://de.wikipedia.org
 * Urgent-Pointer (16 Bit): Der Urgent-Pointer („Dringend“-Anzeiger) gibt die Position des ersten Bytes nach den dringlich zu behandelnden Nutzdaten an. Folglich ist dieses Feld nur gültig und relevant, wenn das URG-Flag gesetzt ist.
 * Optionen (0–320 Bit): Sollen TCP-Funktionen bereitgestellt werden, die nicht in den generellen Header gehören, geschieht dies über das Optionsfeld – ein mögliches Beispiel ist die Definition der maximalen Segmentgröße. Die Optionen müssen immer eine Länge des Vielfachen von 32 Bit haben, andernfalls ist die Auffüllung mit Null-Bits (Padding) erforderlich.
 
-## Timeout/Prüfsumme, ARP-Protokoll
+## Timeout/Prüfsumme
+
+## ARP-Protokoll
 
 ## Was genau versteht man unter Routing und warum ist dies so praktisch?
 

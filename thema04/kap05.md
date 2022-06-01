@@ -90,7 +90,8 @@ alert(baueNachricht("Finde die Lösung in", "SelfHTML", "MDN", "Wikipedia"));
 
 ## Vererbung
 
-?
+* Überschreibung von Funktionen möglich
+* Keine Polymorphie, da es keine Typen gibt
 
 ## `this`-Parameter
 

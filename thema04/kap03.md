@@ -106,7 +106,9 @@
 
 ## Kann man unter HTML5 noch Layout-Tags verwenden?
 
-?
+* Ja, kann man.
+* Nicht mehr aktuell => Strenge Trennung zwischen Layout und Inhalt
+* Beispiele: `<header>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<details>`, `<summary>` ([https://www.w3schools.com/html/html_layout.asp](https://www.w3schools.com/html/html_layout.asp))
 
 ## Kann eine HTML-Seite manipuliert werden und wie kann man sich gegebenenfalls davor schützen?
 

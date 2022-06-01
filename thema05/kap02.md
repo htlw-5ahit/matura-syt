@@ -50,11 +50,7 @@ Quelle: [https://serverfault.com/questions/256331/how-to-stop-node-js-server](ht
 * Module werden in einem eigenen Ordner gespeichert
 * Können mit NPM oder YARN zentral verwaltet (installiert, geupdatet, gelöscht) werden
 
-## lokale/globale Pools
-
-???
-
-## Update von Moduln
+## Update von Modulen
 
 * Können mit NPM oder YARN zentral verwaltet (installiert, geupdatet, gelöscht) werden
 * Version kann auch in den dependencies manuel eingestellt werden, aber Achtung: Es werden dann die angegebenen Versionen versucht herunterzuladen, unabhängig der Stabilität, Funktionalität, etc

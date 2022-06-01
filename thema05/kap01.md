@@ -49,7 +49,9 @@ Quelle:
 
 ## Erforderliche Technologien
 
-???
+* JavaScript-Technologie -> Frameworks
+    * clientseitig / serverseitig
+    * Veränderung des DOM-Modells
 
 ## Programmiersprachen
 
@@ -63,7 +65,9 @@ Quelle:
 
 ## Layout-Technologie (Prinzipielle Methoden für die UI-Gestaltung – zum Vergleich Java/Windows/Android/Apple Web), Kopplung GUI-Betriebssystem)
 
-???
+* CSS ist deskriptiv (beschreibend)
+* große Freiheiten
+* CSS auslagern in eigene Dateien
 
 ## Deklarative Technologien
 

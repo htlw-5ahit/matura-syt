@@ -7,7 +7,9 @@
 
 ## Entstehung
 
+Ab 1989 entwickelten Tim Berners-Lee und sein Team am CERN, dem europäischen Kernforschungszentrum in der Schweiz, das Hypertext Transfer Protocol, zusammen mit den Konzepten URL und HTML, womit die Grundlagen des World Wide Web geschaffen wurden.
 
+Quelle: [https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ## RFC
 
@@ -156,15 +158,37 @@ Quelle: [https://www.elektronik-kompendium.de/sites/net/1811281.htm](https://www
 
 ## Was muss ein http-Server zur Verfügung stellen?
 
-
+* statische Dateien aus dem Dateisystem bereitstellen
+    * CaseSensitive bei Windows; Linux nicht
+* Multithreading (+ Portauslagerung)
+* Basis Authorizierung
+* Kommunikation mit CGI (Computer Generated Imagery) wie PHP
+* Verschlüsselung mit SSL/TLS (Zertifikat)
+* Multi-Sites
+* Skalierung (+ Reverse Proxy, Load Balancer)
+* Schützen von Endpoints
+* Sessions / Cookies
+    * Cookiesicherheit
 
 ## URL/URI
 
+* URI
+    * URI ... Uniform Resource Identifier
+    * Definition der RFC: eine kompakte Abfolge von Zeichen, die eine abstrakte oder physische Ressource identifizieren.
+* URL
+    * URL ... Uniform Resource Locator
+    * Teilmenge der URIs
+    * physische Standort abgerufen, indem der Netzwerkstandort beschrieben wird
 
+Quelle: [https://www.heise.de/tipps-tricks/URI-und-URL-was-ist-der-Unterschied-4655338.html](https://www.heise.de/tipps-tricks/URI-und-URL-was-ist-der-Unterschied-4655338.html)
 
 ## Wie kann man eine WebApplikation schützen?
 
-
+* WAF ... Web Application Firewall
+* Authentizifierung
+* DirectoryListenings
+* Virtuelle Verzeichnisse / Alias
+* CORS ... Cross-Origin Resource Sharing
 
 ## Was kann ein Hacker bei einem WebServer „angreifen“?
 
@@ -181,7 +205,11 @@ Quelle: [https://www.elektronik-kompendium.de/sites/net/1811281.htm](https://www
 
 ## Inwieweit spielt hier die IT-Sicherheit eine Rolle – welchen Beitrag kann ein Webserver hier liefern?
 
+s.o.
 
+* Minimuminformation über Webserver (Typ + Version)
+* Gleiche Anfragen unterbingen
+* Rechtesetzung
 
 ## Welche Rolle spielt das Betriebssystem?
 
