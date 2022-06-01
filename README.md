@@ -49,7 +49,7 @@
 
 ## 8. IT-Security
 
-1. [Firewallkonzepte (REFR)]()
-2. [Kryptographie (REFR)]()
+1. [Firewallkonzepte (REFR)](./thema08/kap01.md)
+2. [Kryptographie (REFR)](./thema08/kap02.md)
 3. [Paketfilter mit IP-Tables (ELSI)](./thema08/kap03.md)
 4. [Virtual Private Network (ELSI)](./thema08/kap04.md)
