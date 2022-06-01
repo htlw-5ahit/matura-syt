@@ -62,7 +62,21 @@ Quelle: [https://de.acervolima.com/vor-und-nachteile-von-sql/](https://de.acervo
 
 ## Für welche Problembereiche eignet sich eine SQL-DB?
 
-???
+* Dort wo es auf Genauigkeit, Integrität, Aktualität und Nachvollziehbarkeit ankommt nutzt man eine SQL Datenbanken
+* Praktische Beispiele für eine SQL Datenbank Anwendung sind:
+    * Datenbanken im Rechnungswesen
+    * Datenbanken im Bankenwesen
+
+* Eignung von SQL Datenbanken
+    * Immer gleiche Einträge zu erstellen
+    * Keine Ist-Teil Beziehungen zwischen den Elementen
+    * Einzutragende Werte sind eindeutig identifizierbar mittels eines Attributs
+    * Wenn kein Sharding notwendig ist
+    * ACID-Eigenschaften erfüllbar
+
+Quelle:
+* [https://www.talend.com/de/resources/sql-vs-nosql/](https://www.talend.com/de/resources/sql-vs-nosql/)
+* [https://www.tenmedia.de/de/glossar/sql-datenbank](https://www.tenmedia.de/de/glossar/sql-datenbank)
 
 ## Verwendung von SQL in einer Applikationssprache wie Java/Javascript – wie können beispielsweise Objekte abgespeichert werden?
 
@@ -71,7 +85,9 @@ Quelle: [https://de.acervolima.com/vor-und-nachteile-von-sql/](https://de.acervo
 
 ## Daten als Mengen – ist dies ein Problem?
 
-????
+* Relationale Datenbanken sind für die schnelle Speicherung großer Datenmengen nicht geeignet
+* Integritätsprüfungen und die Normalisierung benötigen Zeit bei der Verarbeitung
+* Für diesen Zweck eignen sich schnelle NoSQL Datenbanken besser
 
 ## JSON als Datenformat für web-basierte Lösungen (Java-Script) – Wo liegt hier der Vorteil?
 
@@ -85,11 +101,18 @@ Quelle: [https://de.acervolima.com/vor-und-nachteile-von-sql/](https://de.acervo
 
 ## Json & Strukturierung (komplexe Datenstrukturen)?
 
-???
+* JSON-Strukturen sind beliebig anlegbar
+* Was innerhalb eines JSON-Objektes liegt, ist für die Speicherung in einer schemalosen Datenbank egal
+* In relationalen Datenbanken ist die Speicherung einer beliebigen Datenstruktur nicht möglich!
+* Sollte man JSON Objekte speichern, so kann es sein, dass viele der Spalten nicht genutzt werden und so unnötig viel Speicher benutzt wird (welcher tatsächlich aber nicht gebraucht wird) 
+
+Quelle: [https://bornsql.ca/blog/think-twice-about-storing-json-in-your-sql-server-database/](https://bornsql.ca/blog/think-twice-about-storing-json-in-your-sql-server-database/)
 
 ## Wo stößt SQL an die „Grenzen“?
 
-???
+* Wenn große Menge an Daten zu einem einzelnen Eintrag aus vielen Tabellen gesammelt werden muss
+* Große Menge an kleinen Daten
+* Abbildung vieler Relationen
 
 ## Was versteht man unter „Big Data“?
 
@@ -123,7 +146,15 @@ Quelle: [https://www.sas.com/de_at/insights/big-data/what-is-big-data.html](http
 
 ## Schemenlosen Datenbanken – was muss man hier alles beachten?
 
-???
+* Vorteile
+    * Speicherform ist der DB egal
+    * Elastische Skalierbarkeit
+    * Wunsch nach Dynamischen Schema
+    * Viele Leseabfragen
+* Nachteile
+    * In Relation zu SQL Datenbanken sind sie weniger zuverlässig
+    * Ausgelesene Werte können nicht in ein Objekt gesteckt werden (Problem mit falschen Werten)
+    * Komplexe Abfragen sind schwer realisierbar
 
 ## Einsatzgebiet von NoSQL-Datenbanken – für welche Problembereiche besonders geeignet?
 

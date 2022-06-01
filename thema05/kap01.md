@@ -71,7 +71,7 @@ Quelle:
 
 ## Deklarative Technologien
 
-* *Kennzeichnend für die deklarativen Programmiersprachen ist, dass sie immer ein gewünschtes Endergebnis beschreiben, statt alle Arbeitsschritte aufzuzeigen
+* Kennzeichnend für die deklarativen Programmiersprachen ist, dass sie immer ein gewünschtes Endergebnis beschreiben, statt alle Arbeitsschritte aufzuzeigen
 * Die bekanntesten deklarativen Programmiersprachen:
     * Prolog
     * Lisp
@@ -90,8 +90,7 @@ Quelle: [https://www.ionos.at/digitalguide/websites/web-entwicklung/deklarative-
 * Unzureichende Planung
 * Verwenden von veralteten Funktionen bzw. Frameworks
 
-Quelle:
-* [https://www.it-daily.net/it-management/business-software/fehlerquellen-bei-der-web-app-programmierung](https://www.it-daily.net/it-management/business-software/fehlerquellen-bei-der-web-app-programmierung)
+Quelle: [https://www.it-daily.net/it-management/business-software/fehlerquellen-bei-der-web-app-programmierung](https://www.it-daily.net/it-management/business-software/fehlerquellen-bei-der-web-app-programmierung)
 
 ## Anforderung seitens der IT-Security
 
