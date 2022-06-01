@@ -16,3 +16,5 @@
 * Erstellen Sie eine LDIF Datei, die diesen Baum importiert
 * Erklären Sie was eine LDIF Datei ist, Verwendung, ...
 * Über welches Protokoll greift man von Linux auf das AD zu (LDAP)
+
+[Ausarbeitung von Simon L.](./Verzeichnisdienste_Ausarbeitung_Lattner.pdf)
