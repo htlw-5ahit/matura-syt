@@ -14,3 +14,5 @@
 * Erörtern Sie mögliche Fehlerquellen bei der Adresszuteilung. Welche Fehler können bei der Konfiguration auftreten?
 * Einstellungen an Scopes, L3-Switch
 * Diskussion über Netzaufteilung mit VLANs
+
+[Ausarbeitung von Valon](./DHCP_Ausarbeitung_Hyseni.pdf)

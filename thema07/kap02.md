@@ -14,3 +14,5 @@
 * Welche Protokolle werden genutzt
 * Erläutern Sie den Dateizugriff, wie wird dieser geregelt (WebDAV, FTP)
 * Unterschiede, Eigenschaften, Welcher wird von uns genutzt
+
+[Ausarbeitung von Jonas](./IIS_Ausarbeitung_Ruhland.pdf)
