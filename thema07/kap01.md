@@ -7,14 +7,33 @@
 
 ## Fragestellung: Einrichten eines Verzeichnisdienstes
 
-* Gemischte Umgebung mit Windows und Linux, in diesem Netzwerk soll ein Verzeichnisdienst eingerichtet werden
-* Die Wahl fällt auf Active Directory
-* Nennen Sie auch andere Arten von Verzeichnisdiensten und vergleichen Sie diese (Vorteile, Nachteile)
-* Nennen Sie den Vater aller Verzeichnisdienste
-* Erklären Sie Schema, Objekt, Attribut, ....
-* Erstellen Sie ein kleines Namensraumsmodell (siehe SMÜP) (der Baum)
-* Erstellen Sie eine LDIF Datei, die diesen Baum importiert
-* Erklären Sie was eine LDIF Datei ist, Verwendung, ...
-* Über welches Protokoll greift man von Linux auf das AD zu (LDAP)
+Ausgangssitation: Gemischte Umgebung mit Windows und Linux, in diesem Netzwerk soll ein Verzeichnisdienst eingerichtet werden. Die Wahl fällt auf Active Directory.
 
-[Ausarbeitung von Simon L.](./Verzeichnisdienste_Ausarbeitung_Lattner.pdf)
+* Nennen Sie auch andere Arten von Verzeichnisdiensten und vergleichen Sie diese (Vorteile, Nachteile)
+    * eDirectory, Lightweight Directory Access Protocol, Domain Name Service, Network Information Service
+    * Vorteile:
+        * Zentrale Verwaltung für Benutzerdaten
+        * Vereinfachte Berechitungsvergabe per Gruppenfunktion
+
+* Nennen Sie den Vater aller Verzeichnisdienste
+    * X.500
+    * Ist ein Standard, der Aufbau eines Verzeichnisdienstes beschreibt
+    * Von ihm gibt es keine vollständige Implementierung
+
+* Erklären Sie Schema, Objekt, Attribut, ....
+    * Schema: Bauplan eines Objekts
+    * Objekt: Instanz eines Schemas
+    * Attribut: Eigenschaften eines Objektes (Name, Telefonnummer, E-Mail, …)
+
+* Erstellen Sie ein kleines Namensraumsmodell (siehe SMÜP) (der Baum)
+![](./Namensraummodell.png)
+
+* Erstellen Sie eine LDIF Datei, die diesen Baum importiert
+
+
+* Erklären Sie was eine LDIF Datei ist, Verwendung, ...
+    * LDIF ... LDAP Data Interchange Format 
+    * ASCII Textdatei zum Im- und Exportieren von Verzeichnisstrukturen
+
+* Über welches Protokoll greift man von Linux auf das AD zu
+    * LDAP
