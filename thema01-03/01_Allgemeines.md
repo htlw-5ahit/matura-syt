@@ -60,6 +60,32 @@ Ist ein GPIO als Ausgang deﬁniert, dann kann man Schaltzustände an externe Sc
 #### GPIO auf der Linux Konsole
 
 * `gpio readall`
+* `gpio -1 mode <physical pin id> <OUTPUT/INPUT>`
 * `gpio -1 write <physical pin id> <0/1>`
 
 ![](./assets/gpio.png)
+
+### I2C
+
+`i2cdetect -y 1`
+
+![](./assets/i2cdetect.png)
+
+### 1-Wire
+
+* Für Sensoren, die am Bus liegen
+
+```
+pi@raspi-it-10:~ $ dmesg | grep "wire"
+[    8.209712] Driver for 1-wire Dallas network protocol.
+[    8.229124] gpio-4 (onewire@0): enforced open drain please flag it properly in DT/ACPI DSDT/board file
+[ 5179.411848] w1_master_driver w1_bus_master1: Attaching one wire slave 28.01145011ffaa crc 01
+```
+
+```
+pi@raspi-it-10:~ $ cd /sys/bus/w1/devices/28-01145011ffaa
+
+pi@raspi-it-10:/sys/bus/w1/devices/28-01145011ffaa $ cat w1_slave
+a6 01 4b 46 7f ff 0c 10 5c : crc=5c YES
+a6 01 4b 46 7f ff 0c 10 5c t=26375
+```
