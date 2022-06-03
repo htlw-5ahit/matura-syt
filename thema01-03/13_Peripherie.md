@@ -95,7 +95,7 @@ Beispiele:
 
 Grundaufbau:
 
-```c
+```cpp
 #include <SD.h>
 
 File myFile;
@@ -108,9 +108,8 @@ void sdCardSetup() {
   }
   
   Serial.println("Initializing SD card...");
-  if (!SD.begin(SDCARD_PIN)) {
-    Serial.println("Initialization failed!");
-    while (1);
+  while(!SD.begin(SDCARD_PIN)) {
+    delay(250);
   }
   Serial.println("Initialization done.");
 

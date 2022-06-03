@@ -97,6 +97,7 @@ void loop() {
 * Schreibt einen HIGH- oder LOW-Wert auf einen Digitalpin.
 * Wenn der Pin mit pinMode() als Outputpin gesetzt wird, wird die Spannung auf den Wert 5V (oder 3,3V) für HIGH gesetzt, 0V für LOW. Es wird empfohlen, den Pin mit pinMode() auf INPUT_PULLUP zu setzen, um den internen Pull-Up-Widerstand zu nutzen.
 * Wenn du pinMode() nicht auf OUTPUT setzt, aber eine LED auf den Pin anschließt, kann die LED mit digitalWrite(HIGH) gedimmt erscheinen. Wenn pinMode() nicht explicit gesetzt wird, verwendet digitalWrite() den Pull-Up-Widerstand, der als eine Art großer spannungslimitierender Widerstand wirkt.
+* `analogWrite` verursacht ein PWM-Signal mit 0/255 bis 255/255 HIGH-Anteil
 
 Syntax:
 

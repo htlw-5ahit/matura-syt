@@ -301,4 +301,5 @@ Beispiele:
 ## Gyroskop-Sensor
 
 Beispiele:
+- [adafruit/Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050)
 - [Raspberry Pi: MPU-6050](https://github.com/htlw-5ahit/matura-syt/tree/main/thema01-03/code/raspberrypi/sensoren/mpu-6050.c)
