@@ -152,7 +152,7 @@ User Datagram Protocol:
 
 Vergleich OSI/ISO Schichtenmodell mit TCP/IP-Schichtenmodell
 
-![](./OSIISO TCPIP.gif)
+<img src="./OSIISO TCPIP.gif" width="400">
 
 ## Aufteilung des Streams auf Packages?
 
