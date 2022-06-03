@@ -6,10 +6,8 @@
 
 Syntax:
 
-`char text[LENGTH]`
-
-
-`sprintf(text, "Formatierung", [variable1, variable2, veriable, …])`
+* `char text[LENGTH]`
+* `sprintf(text, "Formatierung", [variable1, variable2, veriable, …])`
 
 | Format | Bedeutung                                                         |
 |--------|-------------------------------------------------------------------|
