@@ -76,12 +76,14 @@ Quelle: [https://www.dreher-consulting.com/blog/cloud-computing/](https://www.dr
 
 ## Cloud-basierte Lösungen im mobilen Bereich Beispiele
 
-???
+* Soziale Netzwerke
+* Runtastic Sportapp
+* allgemein Anwendungen die lokale Daten im Internet zur Verfügung stellen
 
 ## Bekannte Anbieter von solchen Cloud-Lösungen
 
 * Microsoft Azure
-* Amazon AWS
+* Amazon AWS: virutelle Maschine, virutelle Netzwerke, KI, SaaS allgemein
 
 ## Alternativen zu einer Cloud-Lösung (Zugriff auf Daten)
 
@@ -99,7 +101,16 @@ Quelle: [https://www.silver-tipps.de/clouds-grundlage-des-mobilen-internets/](ht
 
 ## Unterschied zu herkömmlichen Nutzung von persistenten Daten (SQL, NoSQL)
 
-???
+Wichtig vor allem aus der Sicht eines Administrators; dieser muss entscheiden
+* Wann nehme ich lokale Datenspeicherung (eigener Datenbank)
+* Wann nehme ich eine Cloud-Lösung
+
+Die Wahl ist nach folgenden Kriterien zu treffen:
+* Wartung
+* Ausfallssicherheit
+* Performance
+* Sicherheit (IT-Security, physischer Schutz, Auslesen von Daten)
+
 
 ## Wie können die Services administriert werden?
 
@@ -148,4 +159,9 @@ Quelle:
 
 ## Welche Ansprüche hat der Cloudanwender?
 
-???
+* Recht auf Löschung der Daten
+* Recht auf Einsicht aller personenbezogener Daten
+* Recht auf sichere Speicherung der Daten
+* Recht auf persönliche Reglung der personenbezogenen Daten
+
+allg. für DSGVO gilt: So wenig personenbezogene Daten wie möglich speichern

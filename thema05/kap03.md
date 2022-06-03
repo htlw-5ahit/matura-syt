@@ -93,7 +93,9 @@ Quelle: [https://www.dev-insider.de/was-bedeutet-mvvm-a-1103448/](https://www.de
 
 ## Refresh des GUI
 
-???
+* Die Anzeige von Daten in Vue ist dynamisch
+* Werden die Daten zur Laufzeit geändert, so wird auch die Anzeige mit den geänderten Daten befüllt
+* Dies wird in Vue mit der ref( )- Funktion realisiert, diese ist ein Art Datenbinding in Vue
 
 ## Transpiler
 
@@ -329,7 +331,9 @@ s.o.
 
 ## Konzept der losen Bindung
 
-???
+* Komponenten sind unabhängig voneinander
+* Komponente stellt so gut wie keine Anforderungen an ein System (--> Konzept der losen Binding)
+* Beispiel Auto Industrie: Schrauben immer an gleicher Stelle verbaut, aber eine Schraube in mehreren Modellen verbaut
 
 ## Error-Handling
 

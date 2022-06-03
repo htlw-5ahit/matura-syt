@@ -308,8 +308,14 @@ Code --(parse)-->AST--(transform)-->AST--(generate)-->Code
 
 <img src="./Paradigma.png" width="400">
 
-* Prinzipe
-    * Prinzip 1: Funktionen sind Objekte erster Klasse.
-    * Prinzip 2: Funktionen arbeiten mit unveränderlichen Datenstrukturen.
-    * Prinzip 3: Funktionen haben keine Nebeneffekte.
-    * Prinzip 4: Funktionale Programme sind deklarativ.
+Funktionales Paradigma:
+* Alle Aufgaben werden in Unterfunktionen ausgelagert
+* Jede Funktion hat eine Aufgabe, für welche die Funktion entwickelt worden ist
+
+Prozedurales Paradigma:
+* Gesamte Logik (Programmablauf) ist in einer einzigen Funktion
+* Empfiehlt sich bei kleinen Anwendung, große Anwendungen wären zu unübersichtlich
+
+Objektorientiertes Paradigma:
+* Für die gesamten Aufgaben werden Objekte erzeugt (Attribute, Funktion, ...)
+* Diese einzelnen Objekte haben alle ihre eigenen Aufgaben, für welche sie benutzt werden können

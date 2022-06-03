@@ -44,14 +44,25 @@ Quelle:
 
 ## Erforderliche Komponenten im WebBereich
 
-* Clientseitig: Browser
-* Serverseitig: Webserver
+Clientseitig: 
+* Browser mit JavaScript (notwendig für dynamisches HTML, Änderungen am DOM zur Laufzeit, ...)
+
+Serverseitig: 
+* Fertig konfigurierter Web-Server (Apache)
+* Selbst programmierter Web-Server (Java, Express, NodeJs)
+
+Allgemeine Komponenten des Webs:
+* HTML, CSS
+* Javascript
+* Vue, React, Angular, Express
 
 ## Erforderliche Technologien
 
-* JavaScript-Technologie -> Frameworks
-    * clientseitig / serverseitig
-    * Veränderung des DOM-Modells
+s.o. + 
+* Asynchronität
+* Mongoose
+* MongoDB
+ 
 
 ## Programmiersprachen
 

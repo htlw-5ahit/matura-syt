@@ -165,7 +165,7 @@ Quelle: [https://www.elektronik-kompendium.de/sites/net/1811281.htm](https://www
 
 ## REST-Service / REST API
 
-* REST steht für REpresentational State Transfer, API für Application Programming Interface.
+* REST steht für Representational State Transfer, API für Application Programming Interface.
 
 ## Was muss ein http-Server zur Verfügung stellen?
 

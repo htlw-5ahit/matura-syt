@@ -129,7 +129,9 @@ s.o.
 
 ## Was genau versteht man unter Routing und warum ist dies so praktisch?
 
-???
+* Routing ist die Kopplung von vielen verschiedenen privaten und öffentlichen Netzen
+* Resultat des globalen Routings ist das Internet
+* Wichtigste Aufgabe des Routing ist es, das Pakete zu ihrem Ziel finden und vom Ziel wieder Antworten zurückgelangen
 
 ## Wofür braucht man NAT (könnte man darauf auch verzichten?)
 
@@ -138,7 +140,19 @@ s.o.
 
 ## Unterschied TCP/UDP
 
-???
+Transmission Control Protocol: 
+* stellt eine Verbindung zwischen zwei Endpunkten einer Netzverbindung her 
+* Daten in beide Richtungen übertragen 
+* Datenverluste werden erkannt und automatisch behoben 
+
+User Datagram Protocol: 
+* Verbindungslos 
+* Daten werden geschickt, ohne zu prüfen, ob sie ankommen 
+* Weniger Datentransfer als bei TCP 
+
+Vergleich OSI/ISO Schichtenmodell mit TCP/IP-Schichtenmodell
+
+<img src="./OSIISO TCPIP.gif" width="400">
 
 ## Aufteilung des Streams auf Packages?
 
@@ -158,6 +172,10 @@ Der Datenstrom wird aufgeteilt. Die entstandenen Packages werden dann nach dem R
 Der Endpoint, also der Empfänger der Übertragung, wartet bis alle Pakete angekommen sind. Ob alle Pakete angekommen sind, ergibt sich aus der Prüfsumme des Pseudoheaders. Wenn alle Pakete  angekommen sind, dann wird der Session Manager von TCP die Pakete aneinanderreihen und der fertige Datenstrom ist verfügbar. Dieser wird dann der Anwendung überreicht.
 
 ## Wie garantiert TCP, dass das Package tatsächlich ankommt (welche zusätzliche Kommunikation ist da notwendig?)
+
+Es wird eine zusätzliche Verbindung aufgebaut. Obwohl es sich eher um eine virtuelle Verbindung handelt, werden während der Datenübertragung ständig Kontrollmeldungen ausgetauscht. Der Empfänger bestätigt dem Sender jedes empfangene Datenpaket. Trifft keine Bestätigung beim Absender ein, wird das Paket noch mal verschickt.
+
+Da es bei Übertragungsproblemen zu doppelten Datenpaketen und Quittierungen kommen kann, werden alle TCP-Pakete und TCP-Meldungen mit einer fortlaufenden Sequenznummer gekennzeichnet. So sind Sender und Empfänger in der Lage, die Reihenfolge und Zuordnung der Datenpakete und Meldungen zu erkennen.
 
 ## Wie groß kann ein TCP-Package werden – wovon hängt dies noch ab?
 
