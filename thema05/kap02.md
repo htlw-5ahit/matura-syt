@@ -6,7 +6,7 @@
 
 ## Modulkonzept (Import-/Export)
 
-???
+* Hinzufügen von Libraries (vorgefertigter Code) durch einheitlichen Packetmanager wie npm oder yarn
 
 ## npm/yarn
 
