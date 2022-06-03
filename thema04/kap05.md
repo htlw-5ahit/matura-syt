@@ -95,7 +95,7 @@ alert(baueNachricht("Finde die Lösung in", "SelfHTML", "MDN", "Wikipedia"));
 
 ## `this`-Parameter
 
-* Verweis auf das Objekt, das die aktuelle JS-Funktion aufgerufen hat
+* Verweis auf das eigene `window`-Objekt, das die aktuelle JS-Funktion aufgerufen hat
 * Können durch Verwendung von Closures vermieden werden
 
 ## Google-V8-Engine
@@ -306,7 +306,7 @@ Code --(parse)-->AST--(transform)-->AST--(generate)-->Code
 
 ## Funktionales Programmierparadigma - Idee, Konzeption, Auswirkungen auf die Programmierung
 
-<img src="https://www.webundmobile.de/img/6/5/8/2/7/3/FunktionaleProgrammierung_001_w915_h316.jpg" width="400">
+<img src="./Paradigma.png" width="400">
 
 * Prinzipe
     * Prinzip 1: Funktionen sind Objekte erster Klasse.
