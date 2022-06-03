@@ -59,7 +59,18 @@ Quelle: [https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://de.w
 
 ## Header-Arten und einige Felder
 
+* HTTP Header (Kopfzeilen) erlauben es dem Client und Server zusätzliche Informationen an eine Anfrage oder eine Antwort zu übergeben. 
+* Benutzerdefinierte, proprietäre Header können mit einem 'X-' Präfix hinzugefügt werden.
 
+* Arten von Header
+    * General header
+        * Header die sowohl für Anfragen als auch für Antworten zutreffen, jedoch keinen Bezug zu den Daten haben, die eventuell im Body übertragen werden.
+    * Request header
+        * Header die weitere Informationen über die angeforderte Ressource oder den Client selbst enthalten.
+    * Response header
+        * Header mit weiteren Informationen zur Antwort, wie etwa ihres Orts oder den Server selbst (Name und Version etc.)
+    * Entity header
+        * Header die weitere Informationen über den Body der Entität enthalten, wie etwa der Inhaltslänge oder ihren MIME-Type.
 
 ## Anfragemethoden/-funktionen
 
