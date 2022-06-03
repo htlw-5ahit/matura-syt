@@ -120,7 +120,11 @@ Quelle: [https://de.wikipedia.org/wiki/Protokollstapel](https://de.wikipedia.org
 
 ## Timeout/Prüfsumme
 
+s.o.
+
 ## ARP-Protokoll
+
+???
 
 ## Was genau versteht man unter Routing und warum ist dies so praktisch?
 
@@ -132,16 +136,34 @@ Auf NAT kann man in nicht mehr verzichten, da nicht genügend IPv4-Adressen vorh
 
 ## Unterschied TCP/UDP
 
-
+???
 
 ## Aufteilung des Streams auf Packages?
 
+* Eine Funktion von TCP besteht darin, den von den Anwendungen kommenden Datenstrom in Datenpakete bzw. Segmente aufzuteilen (Segmentierung) und beim Empfang wieder zusammenzusetzen.
+* Die Segmente werden mit einem Header versehen, in dem Steuer- und Kontroll-Informationen enthalten sind.
+* Danach werden die Segmente an das Internet Protocol (IP) übergeben.
+* Da beim IP-Routing die Datenpakete unterschiedliche Wege gehen können, entstehen unter Umständen zeitliche Verzögerungen, die dazu führen, dass die Datenpakete beim Empfänger in einer anderen Reihenfolge eingehen, als sie ursprünglich hatten. Deshalb werden die Segmente beim Empfänger auch wieder in die richtige Reihenfolge gebracht und erst dann an die adressierte Anwendung übergeben. Dazu werden die Segmente mit einer fortlaufenden Sequenznummer versehen (Sequenzierung).
+
+[https://www.elektronik-kompendium.de/sites/net/0812271.htm](https://www.elektronik-kompendium.de/sites/net/0812271.htm)
+
 ## Wie werden Packages über das Netz versendet?
 
+Der Datenstrom wird aufgeteilt. Die entstandenen Packages werden dann nach dem Routing-Prinzip zu seinem Ziel gebracht. Es ist für das TCP nicht relevant, wann welcher Teil der Nachricht ankommt. TCP gibt die erhaltenen Daten erst dann an die Anwendung, wenn alle Teile, also alle Prüfnummern, von allen Paketen eingetroffen sind und alles zusammengeführt ist.
+
 ## Wie kann der Stream am Endpoint wieder zusammengebaut werden?
+
+Der Endpoint, also der Empfänger der Übertragung, wartet bis alle Pakete angekommen sind. Ob alle Pakete angekommen sind, ergibt sich aus der Prüfsumme des Pseudoheaders. Wenn alle Pakete  angekommen sind, dann wird der Session Manager von TCP die Pakete aneinanderreihen und der fertige Datenstrom ist verfügbar. Dieser wird dann der Anwendung überreicht.
 
 ## Wie garantiert TCP, dass das Package tatsächlich ankommt (welche zusätzliche Kommunikation ist da notwendig?)
 
 ## Wie groß kann ein TCP-Package werden – wovon hängt dies noch ab?
 
+* Maximal 1452 Bytes
+* Theoretisch 1500 Bytes möglich
+* Es sind weniger Bytes praktisch möglich als theoretisch möglich, dies liegt daran, dass die Pakete jeweils in die darunterliegende Schicht passen müssen (Größe des Data Teils der jeweiligen Schichten)
+* Bei jeder neuen TCP-Verbindung wird zu Beginn jedoch zwischen beiden Teilnehmern die maximale Größe eines Segments definiert
+
 ## Chiffrieren von Daten - wo geschieht diese im TCP-Stack?
+
+[https://www.elektronik-kompendium.de/sites/net/1706131.htm](https://www.elektronik-kompendium.de/sites/net/1706131.htm)
