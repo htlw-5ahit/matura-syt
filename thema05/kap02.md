@@ -1,12 +1,39 @@
 # Serverseitiges Javascript
 
 ## NodeJS - Grundidee/Konzeption/Struktur
+Grundidee
+* Node.js ist eine plattformübergreifende Open-Source-JavaScript-Laufzeitumgebung
+* Damit kann zum Beispiel ein Webserver betrieben werden
+* Wird in der JavaScript-Laufzeitumgebung V8 ausgeführt
 
-???
+Konzeption/Architektur
+* Die Skriptsprache JavaScript gibt eine ereignisgesteuerte Architektur vor 
+* Im Server-Betrieb ist der Vorteil, dass pro bestehender Verbindung weniger Arbeitsspeicher benötigt wird
+
+Struktur
+* Node.js wird mit besonderem Fokus auf die Performance entwickelt
+* Zugriffe auf das Netzwerk und Dateisystem werden über die von Libuv bereitgestellte Ereignisschleife (event loop) und den darunterliegenden Thread Pool abgearbeitet
+
 
 ## Modulkonzept (Import-/Export)
 
+Hauptaugenmerk von NodeJs
+Grundmodule von NodeJs
+* Asynchroner Netzwerkzugriff
+* Adapter für Dateisystem
+* Puffer
+* Zeitgeber
+* Datenstrom
+
+Weitere Module von NodeJs
+* Alle Dateien mit der Endung .node können einfach nachgezogen werden
+* Einfache JavaScript-Dateien
+* Für größere Pakete gibt es den Paketmanager npm
 * Hinzufügen von Libraries (vorgefertigter Code) durch einheitlichen Packetmanager wie npm oder yarn
+
+In der Praxis:
+* Bei Auslieferung soll Modul-Ordner des Projektes leer sein
+* Bei Installation beim Kunden sollen Module neu heruntergeladen werden (da er über Git, ... verfübar ist)
 
 ## npm/yarn
 
