@@ -124,15 +124,17 @@ s.o.
 
 ## ARP-Protokoll
 
-???
+* Das Address Resolution Protocol (ARP) ist ein Netzwerkprotokoll, das zu einer Netzwerkadresse der Internetschicht die physische Adresse (Hardware-Adresse) der Netzzugangsschicht ermittelt und diese Zuordnung gegebenenfalls in den ARP-Tabellen der beteiligten Rechner hinterlegt.
+* Es wird fast ausschließlich im Zusammenhang mit IPv4-Adressierung auf Ethernet-Netzen, also zur Ermittlung von MAC-Adressen zu gegebenen IP-Adressen verwendet, obwohl es nicht darauf beschränkt ist.
 
 ## Was genau versteht man unter Routing und warum ist dies so praktisch?
 
-Network Address Translation (NAT) ermöglicht es, die Ziel- oder Quell-IP-Adressen eines Datenpakets durch eine andere Adresse zu ersetzen. NAT wird häufig verwendet, um aufgrund der Knappheit öffentlicher IP-Adressen mit privaten IP-Adressen im Internet zu kommunizieren. Diese Maskierung mehrerer privater IP-Adressen hinter einer öffentlichen IP-Adresse hat auch sicherheitstechnische Vorteile.
+???
 
 ## Wofür braucht man NAT (könnte man darauf auch verzichten?)
 
-Auf NAT kann man in nicht mehr verzichten, da nicht genügend IPv4-Adressen vorhanden sind.
+* Network Address Translation (NAT) ermöglicht es, die Ziel- oder Quell-IP-Adressen eines Datenpakets durch eine andere Adresse zu ersetzen. NAT wird häufig verwendet, um aufgrund der Knappheit öffentlicher IP-Adressen mit privaten IP-Adressen im Internet zu kommunizieren. Diese Maskierung mehrerer privater IP-Adressen hinter einer öffentlichen IP-Adresse hat auch sicherheitstechnische Vorteile.
+* Auf NAT kann man in nicht mehr verzichten, da nicht genügend IPv4-Adressen vorhanden sind.
 
 ## Unterschied TCP/UDP
 
