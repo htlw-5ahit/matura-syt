@@ -173,7 +173,7 @@ Quelle: [https://www.elektronik-kompendium.de/sites/net/1811281.htm](https://www
     * CaseSensitive bei Windows; Linux nicht
 * Multithreading (+ Portauslagerung)
 * Basis Authorizierung
-* Kommunikation mit CGI (Computer Generated Imagery) wie PHP
+* Kommunikation mit CGI (Common Gateway Interface) wie PHP
 * Verschlüsselung mit SSL/TLS (Zertifikat)
 * Multi-Sites
 * Skalierung (+ Reverse Proxy, Load Balancer)
