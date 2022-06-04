@@ -40,3 +40,4 @@ Ausgangssitation: Nehmen sie an, sie sollen einen kostengünstige Firewall mit e
     ```
 
 * Im Beiblatt 3 finden sie ein Skript mit IP-Tables vor. Nehmen sie an, sie haben diese im Internet gefunden. Erstellen sie darauf ein eigenes Skript, das den Zugriff aus dem Internet auf den Webserver in der DMZ erlaubt, und jeglichen Zugriff auf die Firewall aus dem Internet verhindert. Erläutern sie die entsprechende Befehle.
+    * [iptables-script.sh](./iptables-script.sh)
