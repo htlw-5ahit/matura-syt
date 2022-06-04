@@ -32,7 +32,7 @@
 * Wird vom World Wide Web Consortium definiert
 * Für den gesamten Baum gibt es genau 1 Root Element
 
-<src img="https://wiki.selfhtml.org/images/thumb/0/01/DOM-1.svg/1000px-DOM-1.svg.png" width="500">
+<img src="https://wiki.selfhtml.org/images/thumb/0/01/DOM-1.svg/1000px-DOM-1.svg.png" width="500">
 
 ## HTML-Code
 
