@@ -8,18 +8,18 @@
 * Dem Empfänger fehlt aber natürlich der Schlüssel
 * Bei der symmetrischen Verschlüsselung sehr wichtig ist es, dass der Schlüssel auf einem sicheren Übertragungsweg an den Empfänger weitervermittelt wird
 
-Blockverschlüsselung
+#### Blockverschlüsselung
 * Verschlüsselt einen Teil eines Texte mittels eine Schlüssels
 * Zu Beginn nur schwache Verschlüsselung
 * Moderne Blockchain sichern allerdings sehr gute Verschlüsselung zu
 
-Stromverschlüsselung
+#### Stromverschlüsselung
 * Klartext wird Zeichen für Zeichen verschlüsselt durchlaufen
 * Jedes Zeichen wird mittels des Schlüsselstroms verändert
 * Der Schlüsselstrom ist eine pseudozufällige Zeichenfolge, welche aus dem Schlüssel abgeleitet werden
 * Ist unabhängiger als die Blockchain, hat aber eine wenig leichtere Verschlüsselung als die moderne Blockchain
 
-Hash Verschlüsselung
+#### Hash Verschlüsselung
 * Ist eine mathematische Berechnung aus den einzelnen Zeichen und Primzahlen
 * Ist eine Einwegverschlüsselung
 * Eine Änderung eines einzelnen Zeichens ändert das komplette Hash 
