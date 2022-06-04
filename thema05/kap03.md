@@ -115,7 +115,8 @@ Quelle:
 
 * Zentral in `App.vue`
 * Mittels `ref()`–Funktion zu realisieren
-* Im Template-Bereich 
+* Im Template-Bereich nutzbar bzw. an die Komponenten weiterzugeben
+* Haltung der verschiedenen Daten in Skript-Bereich der `App.vue`
 
 ## Progressive Framework
 
