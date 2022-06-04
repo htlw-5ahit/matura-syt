@@ -30,9 +30,9 @@
     * `let` ... Verfügbarkeit nur in der Funktion
     * `var` ... Verfügbarkeit in der ganzen JavaScript-Datei
 * Lose Typisierung
-    * Es werden keine Typen zu den Variablen geschrieben.
+    * Es werden keine Typen den Variablen zugeordnet.
     * Der Typ ist automatisch abhängig von zugewiesenen Wert
-    * Eine Variable im Laufe ihres Lebens Typen haben
+    * Eine Variable kann im Laufe ihres Lebens mehrere Typen haben
     * Kein Casting
     * `typeof` gibt den Typ als Rückgabewert zurück
 

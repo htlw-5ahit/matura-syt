@@ -8,18 +8,18 @@
 * Dem Empfänger fehlt aber natürlich der Schlüssel
 * Bei der symmetrischen Verschlüsselung sehr wichtig ist es, dass der Schlüssel auf einem sicheren Übertragungsweg an den Empfänger weitervermittelt wird
 
-Blockverschlüsselung
+#### Blockverschlüsselung
 * Verschlüsselt einen Teil eines Texte mittels eine Schlüssels
 * Zu Beginn nur schwache Verschlüsselung
 * Moderne Blockchain sichern allerdings sehr gute Verschlüsselung zu
 
-Stromverschlüsselung
+#### Stromverschlüsselung
 * Klartext wird Zeichen für Zeichen verschlüsselt durchlaufen
 * Jedes Zeichen wird mittels des Schlüsselstroms verändert
 * Der Schlüsselstrom ist eine pseudozufällige Zeichenfolge, welche aus dem Schlüssel abgeleitet werden
 * Ist unabhängiger als die Blockchain, hat aber eine wenig leichtere Verschlüsselung als die moderne Blockchain
 
-Hash Verschlüsselung
+#### Hash Verschlüsselung
 * Ist eine mathematische Berechnung aus den einzelnen Zeichen und Primzahlen
 * Ist eine Einwegverschlüsselung
 * Eine Änderung eines einzelnen Zeichens ändert das komplette Hash 
@@ -42,7 +42,7 @@ Will der Sender Daten verschlüsselt an den Empfänger senden, benötigt er den 
 * Es ermöglicht, dass zwei Kommunikationspartner über eine öffentliche, abhörbare Leitung einen gemeinsamen geheimen Schlüssel in Form einer Zahl vereinbaren können, den nur diese kennen und ein potenzieller Lauscher nicht berechnen kann
 * Der dadurch vereinbarte Schlüssel kann anschließend für ein symmetrisches Kryptosystem verwendet werden
 
-RSA – Sicherheit von RSA
+#### RSA – Sicherheit von RSA
 * Die RSA Verschlüsselung ist ein asymmetrisches Verschlüsselungsverfahren
 * häufig im Internet zur sicheren Datenübertragung eingesetzt
 * Eigenschaften/ Sicherheit
@@ -52,7 +52,6 @@ RSA – Sicherheit von RSA
     * Das RSA Verfahren eignet sich zur Kommunikation mit vielen Teilnehmern, da der öffentliche Schlüssel allen bekannt sein darf und somit nicht mit jedem Kommunikationsteilnehmer ein Schlüssel geheim ausgetauscht werden muss.
     * Nur der Besitzer des privaten Schlüssels kann eine Nachricht wieder einfach entschlüsseln.
 * Der öffentliche Schlüssel wird zum Verschlüsseln eingesetzt und sollte für jeden frei zugänglich sein. Den privaten Schlüssel hingegen sollte nur der Besitzer kennen, da man nur mit diesem Schlüssel die Nachricht wieder entschlüsseln kann.
-
 
 Quelle:
 * [https://www.elektronik-kompendium.de/sites/net/1910111.htm](https://www.elektronik-kompendium.de/sites/net/1910111.htm)
