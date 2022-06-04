@@ -42,7 +42,7 @@ Will der Sender Daten verschlüsselt an den Empfänger senden, benötigt er den 
 * Es ermöglicht, dass zwei Kommunikationspartner über eine öffentliche, abhörbare Leitung einen gemeinsamen geheimen Schlüssel in Form einer Zahl vereinbaren können, den nur diese kennen und ein potenzieller Lauscher nicht berechnen kann
 * Der dadurch vereinbarte Schlüssel kann anschließend für ein symmetrisches Kryptosystem verwendet werden
 
-RSA – Sicherheit von RSA
+#### RSA – Sicherheit von RSA
 * Die RSA Verschlüsselung ist ein asymmetrisches Verschlüsselungsverfahren
 * häufig im Internet zur sicheren Datenübertragung eingesetzt
 * Eigenschaften/ Sicherheit
@@ -52,7 +52,6 @@ RSA – Sicherheit von RSA
     * Das RSA Verfahren eignet sich zur Kommunikation mit vielen Teilnehmern, da der öffentliche Schlüssel allen bekannt sein darf und somit nicht mit jedem Kommunikationsteilnehmer ein Schlüssel geheim ausgetauscht werden muss.
     * Nur der Besitzer des privaten Schlüssels kann eine Nachricht wieder einfach entschlüsseln.
 * Der öffentliche Schlüssel wird zum Verschlüsseln eingesetzt und sollte für jeden frei zugänglich sein. Den privaten Schlüssel hingegen sollte nur der Besitzer kennen, da man nur mit diesem Schlüssel die Nachricht wieder entschlüsseln kann.
-
 
 Quelle:
 * [https://www.elektronik-kompendium.de/sites/net/1910111.htm](https://www.elektronik-kompendium.de/sites/net/1910111.htm)
