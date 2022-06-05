@@ -4,6 +4,8 @@ case "$1" in
     start)
         # erlaube aufgebaute und zusammenhängende verbindung (ftp, ...)
         iptables -A FORWARD -p tcp -m state –state ESTABLISHED,RELATED -j ACCEPT
+        
+        # erlaube ssh verbindung auf den aktuellen host
         iptables -A INPUT -p tcp -s 0/0 -d 192.168.24.14 --dport 22 -m state --state NEW -j ACCEPT
 
         # erlaube ftp
