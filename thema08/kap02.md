@@ -42,7 +42,7 @@ Will der Sender Daten verschlüsselt an den Empfänger senden, benötigt er den 
 * Es ermöglicht, dass zwei Kommunikationspartner über eine öffentliche, abhörbare Leitung einen gemeinsamen geheimen Schlüssel in Form einer Zahl vereinbaren können, den nur diese kennen und ein potenzieller Lauscher nicht berechnen kann
 * Der dadurch vereinbarte Schlüssel kann anschließend für ein symmetrisches Kryptosystem verwendet werden
 
-#### RSA – Sicherheit von RSA
+#### RSA – Sicherheit von RSA (Rivest–Shamir–Adleman)
 * Die RSA Verschlüsselung ist ein asymmetrisches Verschlüsselungsverfahren
 * häufig im Internet zur sicheren Datenübertragung eingesetzt
 * Eigenschaften/ Sicherheit
